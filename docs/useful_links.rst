@@ -8,6 +8,10 @@ The PowerPoint Object Model - Descriptive Image
 -----------------------------------------------
 http://www.steverindsberg.com/pptlive/FAQ00040.htm
 
-PowerPoint Macro recorder
+PowerPoint Macro Recorder
 -------------------------
 http://www.steverindsberg.com/pptlive/FAQ00058.htm
+
+PowerPoint (Office) Object Browser Window
+-----------------------------------------
+http://www.steverindsberg.com/pptlive/FAQ00031.htm
