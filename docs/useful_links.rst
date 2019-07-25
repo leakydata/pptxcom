@@ -15,3 +15,7 @@ http://www.steverindsberg.com/pptlive/FAQ00058.htm
 PowerPoint (Office) Object Browser Window
 -----------------------------------------
 http://www.steverindsberg.com/pptlive/FAQ00031.htm
+
+Object Browser Icons Meaning
+----------------------------
+https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/icons-used-in-the-object-browser-and-code-windows 
