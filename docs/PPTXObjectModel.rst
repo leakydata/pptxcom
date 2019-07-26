@@ -1,6 +1,7 @@
 Application
 
   AddIns
+    AddIn
   
   Answer Wizard
   
@@ -9,13 +10,15 @@ Application
   AutoCorrect
   
   COMAddins
-  
+    COMAddin
+    
   CommandBars
+    CommandBar
   
   DefaultWebOptions
   
-  DocumentWindows
-  
-  DocumentWindow
-    Panes
-      Pane
+  DocumentWindows 
+    DocumentWindow
+      Panes
+        Pane
+      Selection
