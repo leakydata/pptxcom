@@ -1,7 +1,6 @@
-Application
-
-|-AddIns
-  --AddIn
+|Application
+||AddIns
+|||AddIn
   
   Answer Wizard
   
