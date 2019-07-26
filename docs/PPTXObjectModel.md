@@ -1,0 +1,82 @@
+**Application**
+
+- Addins
+  - Addin
+- AnswerWizard
+- Assistant
+- AutoCorrect
+- COMAddIns
+  - COMAddIn
+- CommandBars
+  - CommandBar
+- DefaultWebOptions
+- DocumentWindows
+  - DocumentWindow
+    - Panes
+      - --Pane
+    - Selection
+      - --ShapeRange
+        - ActionSettings
+        - Adjustments
+        - CalloutFormat
+        - Diagram
+        - FillFormat
+        - GroupShapes
+        - LineFormat
+        - LinkFormat
+        - OLEFormat
+        - PictureFormat
+        - PlaceholderFormat
+        - Script
+        - ShadowFormat
+        - ShapeNodes
+        - Table
+        - Tags
+        - TextEffectFormat
+        - TextFrame
+          - Application
+          - AutoSize
+          - Creator
+          - DeleteText
+          - HasText
+          - HorizontalAnchor
+          - MarginBottom
+          - MarginLeft
+          - MarginRight
+          - MarginTop
+          - Orientation
+          - Parent
+          - Ruler
+          - TextRange
+          - VerticalAnchor
+          - WordWrap
+      - --SlideRange
+        - ColorScheme
+        - Comments
+        - Design
+        - HeadersFooters
+        - Hyperlinks
+        - Master
+        - Scripts
+        - Shapes
+          - Shape
+        - Slide
+        - SlideShowTransition
+        - Tags
+        - TimeLine
+      - --TextRange
+        - ActionSettings
+        - Font
+        - Paragraph
+  - Shape
+  - View
+- FileDialog
+- FileSearch
+- LanguageSettings
+- NewFile
+- Options
+- Presentations
+  - Presentation
+- SlideShowWindows
+  - Presentation
+  - SlideShowView
