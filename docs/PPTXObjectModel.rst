@@ -1,6 +1,6 @@
 |Application
-||AddIns
-|||AddIn
+  ||AddIns
+    |||AddIn
   
   Answer Wizard
   
