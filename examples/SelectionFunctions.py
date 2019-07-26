@@ -10,7 +10,7 @@ PPT.ActiveWindow.View.GotoSlide(1)
 PPT.ActivePresentation.Slides(1).Shapes(2).Select(-1)
 
 # Select a shape it's Name (the slide must be the current active slide)
-PPT.ActivePresentation.Slides(1).Shapes('StandardCode_IQNum').Select(-1)
+PPT.ActivePresentation.Slides(1).Shapes('Rectangle 1').Select(-1)
 
 
 # Print out the Type number/constant value, of every Shape on the active slide numbered 1 
