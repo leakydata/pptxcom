@@ -22,3 +22,27 @@ Application
       Panes
         Pane
       Selection
+        ShapeRange
+          ActionSettings
+          Adjustments
+          AnimationSettings
+          CalloutFormat
+          ConnectorFormat
+          Diagram
+          FillFormat
+          GroupShapes
+          LineFormat
+          LinkFormat
+          OLEFormat
+          PictureFormat
+          PlaceholderFormat
+          Script
+          ShadowFormat
+          ShapeNodes
+          Table
+          Tags
+          TextEffectFormat
+          TextFrame
+          ThreeDFormat
+        SlideRange
+        TextRange
