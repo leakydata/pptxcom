@@ -98,8 +98,8 @@ Application
           
           ParagraphFormat
     
-      Shape
+    Shape
     
-      View
+    View
     
     
