@@ -64,5 +64,42 @@ Application
           TextFrame
          
           ThreeDFormat
+          
         SlideRange
+          ColorScheme
+          
+          Comments
+          
+          Design
+          
+          HeaderFooters
+          
+          Hyperlinks
+          
+          Master
+          
+          Scripts
+          
+          Shapes
+            Shape
+          
+          Slide
+          
+          SlideShowTransition
+          
+          Tags
+          
+          TimeLine
+        
         TextRange
+          ActionSettings
+          
+          Font
+          
+          ParagraphFormat
+    
+    Shape
+    
+    View
+    
+    
