@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["pywin32>=223", "comtypes>=1.1.7"]
+requirements = ["pywin32>=223"]
 
 setup(
     name="pptxcom",
