@@ -12,21 +12,22 @@ class MsoAnimAccumulate(Enum):
 	msoAnimAccumulateNone = 1  # Does not accumulate.
 	msoAnimAccumulateAlways = 2  # Accumulates with other animation behaviors.
 
-
-
+@unique
 class MsoAnimAdditive(Enum):
 	msoAnimAdditiveAddBase = 1  # Uses the animation behavior of the base animations.
 	msoAnimAdditiveAddSum = 2  # Adds together the animation behavior of multiple animations.
 
 
+@unique
 class MsoAnimAfterEffect(Enum):
+	msoAnimAfterEffectMixed = -1  # Mixed
+	msoAnimAfterEffectNone = 0  # Unchanged
 	msoAnimAfterEffectDim = 1  # Dimmed
 	msoAnimAfterEffectHide = 2  # Hidden
 	msoAnimAfterEffectHideOnNextClick = 3  # Hidden on the next mouse click
-	msoAnimAfterEffectMixed = -1  # Mixed
-	msoAnimAfterEffectNone = 0  # Unchanged
 
-
+	
+@unique
 class MsoAnimateByLevel(Enum):
 	msoAnimateChartAllAtOnce = 7  # Animate chart all at once
 	msoAnimateChartByCategory = 8  # Animate chart by category
@@ -58,12 +59,14 @@ class MsoAnimateByLevel(Enum):
 	msoAnimateTextByThirdLevel = 4  # Animate text by third level
 
 
+@unique
 class MsoAnimCommandType(Enum):
-	msoAnimCommandTypeCall = 1  # Call
 	msoAnimCommandTypeEvent = 0  # Event
+	msoAnimCommandTypeCall = 1  # Call
 	msoAnimCommandTypeVerb = 2  # Verb
 
 
+@unique
 class MsoAnimDirection(Enum):
 	msoAnimDirectionAcross = 18  # Across
 	msoAnimDirectionBottom = 11  # Bottom
@@ -112,172 +115,176 @@ class MsoAnimDirection(Enum):
 	msoAnimDirectionVerticalOut = 26  # Moves Vertically Out
 
 
+@unique
 class MsoAnimEffect(Enum):
+	msoAnimEffectCustom = 0  # Custom Effect
 	msoAnimEffectAppear = 1  # Appears
-	msoAnimEffectArcUp = 47  # Arcs Up
-	msoAnimEffectAscend = 39  # Ascends
-	msoAnimEffectBlast = 64  # Blasts
+	msoAnimEffectFly = 2  # Fly Effect
 	msoAnimEffectBlinds = 3  # Blinds
-	msoAnimEffectBoldFlash = 63  # Bold Flash
-	msoAnimEffectBoldReveal = 65  # Bold Reveals
+	msoAnimEffectBox = 4  # Box
+	msoAnimEffectCheckerboard = 5  # Checkerboard Effect
+	msoAnimEffectCircle = 6  # Circle
+	msoAnimEffectCrawl = 7  # Crawl Effect
+	msoAnimEffectDiamond = 8  # Diamond Effect
+	msoAnimEffectDissolve = 9  # Dissolve Effect
+	msoAnimEffectFade = 10  # Fade Effect
+	msoAnimEffectFlashOnce = 11  # Flash Once
+	msoAnimEffectPeek = 12  # Peek effect
+	msoAnimEffectPlus = 13  # Plus effect
+	msoAnimEffectRandomBars = 14  # Random Bars effect
+	msoAnimEffectSpiral = 15  # Spiral effect
+	msoAnimEffectSplit = 16  # Split effect
+	msoAnimEffectStretch = 17  # Stretch effect
+	msoAnimEffectStrips = 18  # Strips effect
+	msoAnimEffectSwivel = 19  # Swivel effect
+	msoAnimEffectWedge = 20  # Wedge effect
+	msoAnimEffectWheel = 21  # Wheel effect
+	msoAnimEffectWipe = 22  # Wipe effect
+	msoAnimEffectZoom = 23  # Zoom effect
+	msoAnimEffectRandomEffects = 24  # Random effects
 	msoAnimEffectBoomerang = 25  # Boomerangs
 	msoAnimEffectBounce = 26  # Bounce
-	msoAnimEffectBox = 4  # Box
-	msoAnimEffectBrushOnColor = 66  # Brush on Color
-	msoAnimEffectBrushOnUnderline = 67  # Brush on Underline
+	msoAnimEffectColorReveal = 27  # Color Revealed
+	msoAnimEffectCredits = 28  # Credits Effect
+	msoAnimEffectEaseIn = 29  # EaseIn Effect
+	msoAnimEffectFloat = 30  # Float Effect
+	msoAnimEffectGrowAndTurn = 31  # Grow and Turn Effect
+	msoAnimEffectLightSpeed = 32  # Light Speed Effect
+	msoAnimEffectPinwheel = 33  # Pinwel effect
+	msoAnimEffectRiseUp = 34  # Rise Up effect
+	msoAnimEffectSwish = 35  # Swish effect
+	msoAnimEffectThinLine = 36  # Thin line effect
+	msoAnimEffectUnfold = 37  # Unfold effect
+	msoAnimEffectWhip = 38  # Whip effect
+	msoAnimEffectAscend = 39  # Ascends
 	msoAnimEffectCenterRevolve = 40  # Center Revolves
+	msoAnimEffectFadedSwivel = 41  # Faded Swivel Effect
+	msoAnimEffectDescend = 42  # Descend Effect
+	msoAnimEffectSling = 43  # Sling effect
+	msoAnimEffectSpinner = 44  # Spinner effect
+	msoAnimEffectStretchy = 45  # Stretchy effect
+	msoAnimEffectZip = 46  # Zip effect
+	msoAnimEffectArcUp = 47  # Arcs Up
+	msoAnimEffectFadedZoom = 48  # Faded Zoom Effect
+	msoAnimEffectGlide = 49  # Glide Effect
+	msoAnimEffectExpand = 50  # Expand Effect
+	msoAnimEffectFlip = 51  # Flip Effect
+	msoAnimEffectShimmer = 52  # Shimmer effect
+	msoAnimEffectFold = 53  # Fold Effect
 	msoAnimEffectChangeFillColor = 54  # FillColor Changes
 	msoAnimEffectChangeFont = 55  # Font Changes
 	msoAnimEffectChangeFontColor = 56  # Font Color Changes
 	msoAnimEffectChangeFontSize = 57  # Font Size Changes
 	msoAnimEffectChangeFontStyle = 58  # Font Style Changes
+	msoAnimEffectGrowShrink = 59  # Grow and Shrink Effect
 	msoAnimEffectChangeLineColor = 60  # Line color Changes
-	msoAnimEffectCheckerboard = 5  # Checkerboard Effect
-	msoAnimEffectCircle = 6  # Circle
+	msoAnimEffectSpin = 61  # Spin effect
+	msoAnimEffectTransparency = 62  # Transparency effect
+	msoAnimEffectBoldFlash = 63  # Bold Flash
+	msoAnimEffectBlast = 64  # Blasts
+	msoAnimEffectBoldReveal = 65  # Bold Reveals
+	msoAnimEffectBrushOnColor = 66  # Brush on Color
+	msoAnimEffectBrushOnUnderline = 67  # Brush on Underline
 	msoAnimEffectColorBlend = 68  # Color Bleeds
-	msoAnimEffectColorReveal = 27  # Color Revealed
 	msoAnimEffectColorWave = 69  # Color Wave
 	msoAnimEffectComplementaryColor = 70  # Complementary Color
 	msoAnimEffectComplementaryColor2 = 71  # Complementary Color2
 	msoAnimEffectContrastingColor = 72  # Contrasting Color
-	msoAnimEffectCrawl = 7  # Crawl Effect
-	msoAnimEffectCredits = 28  # Credits Effect
-	msoAnimEffectCustom = 0  # Custom Effect
 	msoAnimEffectDarken = 73  # Darken Effect
 	msoAnimEffectDesaturate = 74  # Desaturate Effect
-	msoAnimEffectDescend = 42  # Descend Effect
-	msoAnimEffectDiamond = 8  # Diamond Effect
-	msoAnimEffectDissolve = 9  # Dissolve Effect
-	msoAnimEffectEaseIn = 29  # EaseIn Effect
-	msoAnimEffectExpand = 50  # Expand Effect
-	msoAnimEffectFade = 10  # Fade Effect
-	msoAnimEffectFadedSwivel = 41  # Faded Swivel Effect
-	msoAnimEffectFadedZoom = 48  # Faded Zoom Effect
 	msoAnimEffectFlashBulb = 75  # Flash Bulb Effect
-	msoAnimEffectFlashOnce = 11  # Flash Once
 	msoAnimEffectFlicker = 76  # Flicker Effect
-	msoAnimEffectFlip = 51  # Flip Effect
-	msoAnimEffectFloat = 30  # Float Effect
-	msoAnimEffectFly = 2  # Fly Effect
-	msoAnimEffectFold = 53  # Fold Effect
-	msoAnimEffectGlide = 49  # Glide Effect
-	msoAnimEffectGrowAndTurn = 31  # Grow and Turn Effect
-	msoAnimEffectGrowShrink = 59  # Grow and Shrink Effect
 	msoAnimEffectGrowWithColor = 77  # Grow with Color Effect
 	msoAnimEffectLighten = 78  # Lighten Effect
-	msoAnimEffectLightSpeed = 32  # Light Speed Effect
-	msoAnimEffectMediaPause = 84  # Media Pause Effect
-	msoAnimEffectMediaPlay = 83  # Media Play Effect
-	msoAnimEffectMediaStop = 85  # Media Stop Effect
-	msoAnimEffectPath4PointStar = 101  # Path4PointStar Effect
-	msoAnimEffectPath5PointStar = 90  # Path5PointStar Effect
-	msoAnimEffectPath6PointStar = 96  # Path6PointStar Effect
-	msoAnimEffectPath8PointStar = 102  # Path8PointStar Effect
-	msoAnimEffectPathArcDown = 122  # Moves on the Arc Down path
-	msoAnimEffectPathArcLeft = 136  # Moves on the Arc Left path
-	msoAnimEffectPathArcRight = 143  # Moves on the Arc Right Path
-	msoAnimEffectPathArcUp = 129  # Moves on the Arc Up path
-	msoAnimEffectPathBean = 116  # Moves on the Bean path
-	msoAnimEffectPathBounceLeft = 126  # Moves on the Bounce Left path
-	msoAnimEffectPathBounceRight = 139  # Moves on the Bounce Right path
-	msoAnimEffectPathBuzzsaw = 110  # Moves on the Buzzsaw path
-	msoAnimEffectPathCircle = 86  # Moves on a Circular Path
-	msoAnimEffectPathCrescentMoon = 91  # Moves on a Crescent Moon path
-	msoAnimEffectPathCurvedSquare = 105  # Moves on a CurvedSquare path
-	msoAnimEffectPathCurvedX = 106  # Moves on a Curved X path
-	msoAnimEffectPathCurvyLeft = 133  # Moves on a Curvy Left path
-	msoAnimEffectPathCurvyRight = 146  # Moves on a Curvy Right path
-	msoAnimEffectPathCurvyStar = 108  # Moves on a Curvy Star path
-	msoAnimEffectPathDecayingWave = 145  # Moves on a Decaying Wave path
-	msoAnimEffectPathDiagonalDownRight = 134  # Moves on a Diagonal Down-Right path
-	msoAnimEffectPathDiagonalUpRight = 141  # Moves on a Diagonal Up-Right path
-	msoAnimEffectPathDiamond = 88  # Moves on a Diamond path
-	msoAnimEffectPathDown = 127  # Moves on a Down path
-	msoAnimEffectPathEqualTriangle = 98  # Moves on a equilateral triangle path
-	msoAnimEffectPathFigure8Four = 113  # Moves on a Figure8Four path
-	msoAnimEffectPathFootball = 97  # Moves on a Football path
-	msoAnimEffectPathFunnel = 137  # Moves on a Funnel path
-	msoAnimEffectPathHeart = 94  # Moves on a Heart shape path
-	msoAnimEffectPathHeartbeat = 130  # Moves on a Heart Beat path
-	msoAnimEffectPathHexagon = 89  # Moves on a Hexagon path
-	msoAnimEffectPathHorizontalFigure8 = 111  # Moves on a Horizontal Figure8 path
-	msoAnimEffectPathInvertedSquare = 119  # Moves on a Inverted Square path
-	msoAnimEffectPathInvertedTriangle = 118  # Moves on a Inverted Triangle path
-	msoAnimEffectPathLeft = 120  # Moves on a Left path
-	msoAnimEffectPathLoopdeLoop = 109  # Moves on a LoopdeLoop path
-	msoAnimEffectPathNeutron = 114  # Moves on a Neutron path
-	msoAnimEffectPathOctagon = 95  # Moves on a Octagon path
-	msoAnimEffectPathParallelogram = 99  # Moves on a Parallelogram path
-	msoAnimEffectPathPeanut = 112  # Moves on a Peanut path
-	msoAnimEffectPathPentagon = 100  # Moves on a Pentagon path
-	msoAnimEffectPathPlus = 117  # Moves on a Plus path
-	msoAnimEffectPathPointyStar = 104  # Moves on a PointyStar path
-	msoAnimEffectPathRight = 149  # Moves on a Right path
-	msoAnimEffectPathRightTriangle = 87  # Moves on a RightTriangle path
-	msoAnimEffectPathSCurve1 = 144  # Moves on a SCurve1 path
-	msoAnimEffectPathSCurve2 = 124  # Moves on a SCurve2 path
-	msoAnimEffectPathSineWave = 125  # Moves on a SineWave path
-	msoAnimEffectPathSpiralLeft = 140  # Moves on a SpiralLeft path
-	msoAnimEffectPathSpiralRight = 131  # Moves on a SpiralRight path
-	msoAnimEffectPathSpring = 138  # Moves on a Spring path
-	msoAnimEffectPathSquare = 92  # Moves on a Square path
-	msoAnimEffectPathStairsDown = 147  # Moves on a StairsDown path
-	msoAnimEffectPathSwoosh = 115  # Moves on a Swoosh path
-	msoAnimEffectPathTeardrop = 103  # Moves on a Teardrop path
-	msoAnimEffectPathTrapezoid = 93  # Moves on a Trapezoid path
-	msoAnimEffectPathTurnDown = 135  # Moves on a TurnDown path
-	msoAnimEffectPathTurnRight = 121  # Moves on a TurnRight path
-	msoAnimEffectPathTurnUp = 128  # Moves on a TurnUp path
-	msoAnimEffectPathTurnUpRight = 142  # Moves on a TurnUpRight path
-	msoAnimEffectPathUp = 148  # Moves on an Up path
-	msoAnimEffectPathVerticalFigure8 = 107  # Moves on a VerticalFigure8 path
-	msoAnimEffectPathWave = 132  # Moves on a Wave path
-	msoAnimEffectPathZigzag = 123  # Moves on a Zigzag path
-	msoAnimEffectPeek = 12  # Peek effect
-	msoAnimEffectPinwheel = 33  # Pinwel effect
-	msoAnimEffectPlus = 13  # Plus effect
-	msoAnimEffectRandomBars = 14  # Random Bars effect
-	msoAnimEffectRandomEffects = 24  # Random effects
-	msoAnimEffectRiseUp = 34  # Rise Up effect
-	msoAnimEffectShimmer = 52  # Shimmer effect
-	msoAnimEffectSling = 43  # Sling effect
-	msoAnimEffectSpin = 61  # Spin effect
-	msoAnimEffectSpinner = 44  # Spinner effect
-	msoAnimEffectSpiral = 15  # Spiral effect
-	msoAnimEffectSplit = 16  # Split effect
-	msoAnimEffectStretch = 17  # Stretch effect
-	msoAnimEffectStretchy = 45  # Stretchy effect
-	msoAnimEffectStrips = 18  # Strips effect
 	msoAnimEffectStyleEmphasis = 79  # Emphasis effect
-	msoAnimEffectSwish = 35  # Swish effect
-	msoAnimEffectSwivel = 19  # Swivel effect
 	msoAnimEffectTeeter = 80  # Teeter effect
-	msoAnimEffectThinLine = 36  # Thin line effect
-	msoAnimEffectTransparency = 62  # Transparency effect
-	msoAnimEffectUnfold = 37  # Unfold effect
 	msoAnimEffectVerticalGrow = 81  # Vertical Grow effect
 	msoAnimEffectWave = 82  # Wave effect
-	msoAnimEffectWedge = 20  # Wedge effect
-	msoAnimEffectWheel = 21  # Wheel effect
-	msoAnimEffectWhip = 38  # Whip effect
-	msoAnimEffectWipe = 22  # Wipe effect
-	msoAnimEffectZip = 46  # Zip effect
-	msoAnimEffectZoom = 23  # Zoom effect
+	msoAnimEffectMediaPlay = 83  # Media Play Effect
+	msoAnimEffectMediaPause = 84  # Media Pause Effect
+	msoAnimEffectMediaStop = 85  # Media Stop Effect
+	msoAnimEffectPathCircle = 86  # Moves on a Circular Path
+	msoAnimEffectPathRightTriangle = 87  # Moves on a RightTriangle path
+	msoAnimEffectPathDiamond = 88  # Moves on a Diamond path
+	msoAnimEffectPathHexagon = 89  # Moves on a Hexagon path
+	msoAnimEffectPath5PointStar = 90  # Path5PointStar Effect
+	msoAnimEffectPathCrescentMoon = 91  # Moves on a Crescent Moon path
+	msoAnimEffectPathSquare = 92  # Moves on a Square path
+	msoAnimEffectPathTrapezoid = 93  # Moves on a Trapezoid path
+	msoAnimEffectPathHeart = 94  # Moves on a Heart shape path
+	msoAnimEffectPathOctagon = 95  # Moves on a Octagon path
+	msoAnimEffectPath6PointStar = 96  # Path6PointStar Effect
+	msoAnimEffectPathFootball = 97  # Moves on a Football path
+	msoAnimEffectPathEqualTriangle = 98  # Moves on a equilateral triangle path
+	msoAnimEffectPathParallelogram = 99  # Moves on a Parallelogram path
+	msoAnimEffectPathPentagon = 100  # Moves on a Pentagon path
+	msoAnimEffectPath4PointStar = 101  # Path4PointStar Effect
+	msoAnimEffectPath8PointStar = 102  # Path8PointStar Effect
+	msoAnimEffectPathTeardrop = 103  # Moves on a Teardrop path
+	msoAnimEffectPathPointyStar = 104  # Moves on a PointyStar path
+	msoAnimEffectPathCurvedSquare = 105  # Moves on a CurvedSquare path
+	msoAnimEffectPathCurvedX = 106  # Moves on a Curved X path
+	msoAnimEffectPathVerticalFigure8 = 107  # Moves on a VerticalFigure8 path
+	msoAnimEffectPathCurvyStar = 108  # Moves on a Curvy Star path
+	msoAnimEffectPathLoopdeLoop = 109  # Moves on a LoopdeLoop path
+	msoAnimEffectPathBuzzsaw = 110  # Moves on the Buzzsaw path
+	msoAnimEffectPathHorizontalFigure8 = 111  # Moves on a Horizontal Figure8 path
+	msoAnimEffectPathPeanut = 112  # Moves on a Peanut path
+	msoAnimEffectPathFigure8Four = 113  # Moves on a Figure8Four path
+	msoAnimEffectPathNeutron = 114  # Moves on a Neutron path
+	msoAnimEffectPathSwoosh = 115  # Moves on a Swoosh path
+	msoAnimEffectPathBean = 116  # Moves on the Bean path
+	msoAnimEffectPathPlus = 117  # Moves on a Plus path
+	msoAnimEffectPathInvertedTriangle = 118  # Moves on a Inverted Triangle path
+	msoAnimEffectPathInvertedSquare = 119  # Moves on a Inverted Square path
+	msoAnimEffectPathLeft = 120  # Moves on a Left path
+	msoAnimEffectPathTurnRight = 121  # Moves on a TurnRight path
+	msoAnimEffectPathArcDown = 122  # Moves on the Arc Down path
+	msoAnimEffectPathZigzag = 123  # Moves on a Zigzag path
+	msoAnimEffectPathSCurve2 = 124  # Moves on a SCurve2 path
+	msoAnimEffectPathSineWave = 125  # Moves on a SineWave path
+	msoAnimEffectPathBounceLeft = 126  # Moves on the Bounce Left path
+	msoAnimEffectPathDown = 127  # Moves on a Down path
+	msoAnimEffectPathTurnUp = 128  # Moves on a TurnUp path
+	msoAnimEffectPathArcUp = 129  # Moves on the Arc Up path
+	msoAnimEffectPathHeartbeat = 130  # Moves on a Heart Beat path
+	msoAnimEffectPathSpiralRight = 131  # Moves on a SpiralRight path
+	msoAnimEffectPathWave = 132  # Moves on a Wave path
+	msoAnimEffectPathCurvyLeft = 133  # Moves on a Curvy Left path
+	msoAnimEffectPathDiagonalDownRight = 134  # Moves on a Diagonal Down-Right path
+	msoAnimEffectPathTurnDown = 135  # Moves on a TurnDown path
+	msoAnimEffectPathArcLeft = 136  # Moves on the Arc Left path
+	msoAnimEffectPathFunnel = 137  # Moves on a Funnel path
+	msoAnimEffectPathSpring = 138  # Moves on a Spring path
+	msoAnimEffectPathBounceRight = 139  # Moves on the Bounce Right path
+	msoAnimEffectPathSpiralLeft = 140  # Moves on a SpiralLeft path
+	msoAnimEffectPathDiagonalUpRight = 141  # Moves on a Diagonal Up-Right path
+	msoAnimEffectPathTurnUpRight = 142  # Moves on a TurnUpRight path
+	msoAnimEffectPathArcRight = 143  # Moves on the Arc Right Path
+	msoAnimEffectPathSCurve1 = 144  # Moves on a SCurve1 path
+	msoAnimEffectPathDecayingWave = 145  # Moves on a Decaying Wave path
+	msoAnimEffectPathCurvyRight = 146  # Moves on a Curvy Right path
+	msoAnimEffectPathStairsDown = 147  # Moves on a StairsDown path
+	msoAnimEffectPathUp = 148  # Moves on an Up path
+	msoAnimEffectPathRight = 149  # Moves on a Right path
 
 
+@unique
 class MsoAnimEffectAfter(Enum):
 	msoAnimEffectAfterFreeze = 1  # After freeze.
-	msoAnimEffectAfterHold = 3  # After hold.
 	msoAnimEffectAfterRemove = 2  # After remove.
+	msoAnimEffectAfterHold = 3  # After hold.
 	msoAnimEffectAfterTransition = 4  # After transition.
 
 
+@unique
 class MsoAnimEffectRestart(Enum):
 	msoAnimEffectRestartAlways = 1  # Always restarts.
-	msoAnimEffectRestartNever = 3  # Never restarts.
 	msoAnimEffectRestartWhenOff = 2  # Restarts when animation is off.
+	msoAnimEffectRestartNever = 3  # Never restarts.
 
 
+@unique
 class MsoAnimFilterEffectSubtype(Enum):
 	msoAnimFilterEffectSubtypeAcross = 9  # Across
 	msoAnimFilterEffectSubtypeDown = 25  # Down
@@ -308,6 +315,7 @@ class MsoAnimFilterEffectSubtype(Enum):
 	msoAnimFilterEffectSubtypeVertical = 6  # Vertical
 
 
+@unique
 class MsoAnimFilterEffectType(Enum):
 	msoAnimFilterEffectTypeBarn = 1  # Barn
 	msoAnimFilterEffectTypeBlinds = 2  # Blinds
@@ -330,6 +338,7 @@ class MsoAnimFilterEffectType(Enum):
 	msoAnimFilterEffectTypeWipe = 18  # Wipe
 
 
+@unique
 class MsoAnimProperty(Enum):
 	msoAnimColor = 7  # Color
 	msoAnimHeight = 4  # Height
@@ -376,13 +385,15 @@ class MsoAnimProperty(Enum):
 	msoAnimY = 2  # Y coordinate
 
 
+@unique
 class MsoAnimTextUnitEffect(Enum):
-	msoAnimTextUnitEffectByCharacter = 1  # By character.
-	msoAnimTextUnitEffectByParagraph = 0  # By paragraph.
-	msoAnimTextUnitEffectByWord = 2  # By word.
 	msoAnimTextUnitEffectMixed = -1  # Mixed effect.
+	msoAnimTextUnitEffectByParagraph = 0  # By paragraph.
+	msoAnimTextUnitEffectByCharacter = 1  # By character.
+	msoAnimTextUnitEffectByWord = 2  # By word.
 
 
+@unique
 class MsoAnimTriggerType(Enum):
 	msoAnimTriggerAfterPrevious = 3  # After the Previous button is clicked.
 	msoAnimTriggerMixed = -1  # Mixed actions.
@@ -392,19 +403,21 @@ class MsoAnimTriggerType(Enum):
 	msoAnimTriggerWithPrevious = 2  # When the Previous button is clicked.
 
 
+@unique
 class MsoAnimType(Enum):
+	msoAnimTypeNone = 0  # None
 	msoAnimTypeColor = 2  # Color
 	msoAnimTypeCommand = 6  # Command
 	msoAnimTypeFilter = 7  # Filter
 	msoAnimTypeMixed = -2  # Mixed
 	msoAnimTypeMotion = 1  # Motion
-	msoAnimTypeNone = 0  # None
 	msoAnimTypeProperty = 5  # Property
 	msoAnimTypeRotation = 4  # Rotation
 	msoAnimTypeScale = 3  # Scale
 	msoAnimTypeSet = 8  # Set
 
 
+@unique
 class MsoClickState(Enum):
 	msoClickStateAfterAllAnimations = -2  # After all animations.
 	msoClickStateBeforeAutomaticAnimations = -1  # Before automatic animations.
@@ -454,6 +467,7 @@ class MsoShapeType(Enum):
 	msoLinked3DModel = 31  # Linked 3D model
 
 
+@unique
 class PpActionType(Enum):
 	ppActionEndShow = 6  # Slide show ends.
 	ppActionFirstSlide = 3  # Returns to the first slide.
@@ -471,12 +485,14 @@ class PpActionType(Enum):
 	ppActionRunProgram = 9  # Runs a program.
 
 
+@unique
 class PpAdvanceMode(Enum):
 	ppAdvanceModeMixed = -2  # Mixed mode.
 	ppAdvanceOnClick = 1  # Only when clicked.
 	ppAdvanceOnTime = 2  # Automatically after a specified amount of time.
 
 
+@unique
 class PpAfterEffect(Enum):
 	ppAfterEffectDim = 2  # Appears dimmed
 	ppAfterEffectHide = 1  # Hides
@@ -485,22 +501,26 @@ class PpAfterEffect(Enum):
 	ppAfterEffectNothing = 0  # No effect
 
 
+@unique
 class PpAlertLevel(Enum):
-	ppAlertsAll = 2  # All alerts displayed.
 	ppAlertsNone = 1  # No alerts displayed.
+	ppAlertsAll = 2  # All alerts displayed.
 
 
+@unique
 class PpArrangeStyle(Enum):
-	ppArrangeCascade = 2  # Cascade
 	ppArrangeTiled = 1  # Tiled
+	ppArrangeCascade = 2  # Cascade
 
 
+@unique
 class PpAutoSize(Enum):
 	ppAutoSizeMixed = -2  # Mixed size.
 	ppAutoSizeNone = 0  # Does not change size.
 	ppAutoSizeShapeToFitText = 1  # Auto sizes the shape to fit the text.
 
 
+@unique
 class PpBaselineAlignment(Enum):
 	ppBaselineAlignBaseline = 1  # Aligned to the baseline.
 	ppBaselineAlignCenter = 3  # Aligned to the center.
@@ -509,19 +529,18 @@ class PpBaselineAlignment(Enum):
 	ppBaselineAlignTop = 2  # Aligned to the top.
 
 
+@unique
 class PpBorderType(Enum):
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	"""
+	
+	ppBorderTop = 1  # Top    
+	ppBorderLeft = 2  # Left
 	ppBorderBottom = 3  # Bottom
+	ppBorderRight = 4  # Right
 	ppBorderDiagonalDown = 5  # Diagonally down
 	ppBorderDiagonalUp = 6  # Diagonally up
-	ppBorderLeft = 2  # Left
-	ppBorderRight = 4  # Right
-	ppBorderTop = 1  # Top
-	ppBorderBottom = 3  # Bottom
-	ppBorderDiagonalDown = 5  # Diagonally down
-	ppBorderDiagonalUp = 6  # Diagonally up
-	ppBorderLeft = 2  # Left
-	ppBorderRight = 4  # Right
-	ppBorderTop = 1  # Top
 
 
 @unique    
@@ -558,6 +577,7 @@ class PpChangeCase(Enum):
 	ppCaseToggle = 5  # Toggle upper and lower casing.
 
 
+@unique
 class PpChartUnitEffect(Enum):
 	ppAnimateByCategory = 2  # By category
 	ppAnimateByCategoryElements = 4  # By category elements
@@ -567,9 +587,10 @@ class PpChartUnitEffect(Enum):
 	ppAnimateChartMixed = -2  # Chart mixed
 
 
+@unique
 class PpCheckInVersionType(Enum):
-	ppCheckInMajorVersion = 1  # Major version
 	ppCheckInMinorVersion = 0  # Minor version
+	ppCheckInMajorVersion = 1  # Major version
 	ppCheckInOverwriteVersion = 2  # Overwrite current version
 
 
@@ -595,6 +616,7 @@ class PpColorSchemeIndex(Enum):
 	ppAccent3 = 8  # Accent3
 
 
+@unique
 class PpDateTimeFormat(Enum):
 	ppDateTimeddddMMMMddyyyy = 2  # ddddMMMMddyyyy
 	ppDateTimedMMMMyyyy = 3  # dMMMMyyyy
@@ -613,13 +635,17 @@ class PpDateTimeFormat(Enum):
 	ppDateTimeMMyy = 7  # MMyy
 
 
+@unique
 class PpDirection(Enum):
 	ppDirectionLeftToRight = 1  # Left-to-right layout
 	ppDirectionMixed = -2  # Mixed layout
 	ppDirectionRightToLeft = 2  # Right-to-left layout
 
 
+@unique
 class PpEntryEffect(Enum):
+	ppEffectNone = 0  # None
+	ppEffectMixed = -2  # Mixed
 	ppEffectAppear = 3844  # Appear
 	ppEffectBlindsHorizontal = 769  # Blinds Horizontal
 	ppEffectBlindsVertical = 770  # Blinds Vertical
@@ -659,9 +685,7 @@ class PpEntryEffect(Enum):
 	ppEffectFlyFromTop = 3330  # Fly From Top
 	ppEffectFlyFromTopLeft = 3333  # Fly From Top Left
 	ppEffectFlyFromTopRight = 3334  # Fly From Top Right
-	ppEffectMixed = -2  # Mixed
 	ppEffectNewsflash = 3850  # Newsflash
-	ppEffectNone = 0  # None
 	ppEffectPeekFromDown = 3338  # Peek From Down
 	ppEffectPeekFromLeft = 3337  # Peek From Left
 	ppEffectPeekFromRight = 3339  # Peek From Right
@@ -719,46 +743,59 @@ class PpEntryEffect(Enum):
 	ppEffectZoomOutSlightly = 3348  # Zoom Out Slightly
 
 
+@unique
 class PpFarEastLineBreakLevel(Enum):
-	ppFarEastLineBreakLevelCustom = 3  # Custom level
 	ppFarEastLineBreakLevelNormal = 1  # Normal level
 	ppFarEastLineBreakLevelStrict = 2  # Strict level
+	ppFarEastLineBreakLevelCustom = 3  # Custom level
+	
 
-
+@unique
 class PpFixedFormatIntent(Enum):
 	pFixedFormatIntentPrint = 2  # Intent is to print exported file.
 	ppFixedFormatIntentScreen = 1  # Intent is to view exported file on screen.
 
 
+@unique
 class PpFixedFormatType(Enum):
 	ppFixedFormatTypePDF = 2  # PDF format
 	ppFixedFormatTypeXPS = 1  # XPS format
 
 
+# Not a unique enumeration
 class PpFollowColors(Enum):
+	"""
+	Not a unique enumeration
+	"""
 	ppFollowColorsMixed = -2  # The chart colors follow a mixed format of the slide's color scheme.
-	ppFollowColorsNone = 0  # The chart colors do not follow the slide's color scheme.
+	ppFollowColorsNone = 0  # The chart colors do not follow the slide's color scheme.    
+	
 	ppFollowColorsScheme = 1  # All the colors in the chart follow the slide's color scheme.
-	ppFollowColorsTextAndBackground = 2  # Only the text and background follow the slide's color scheme.
-	ppFrameColorsBlackTextOnWhite = 5  # Use White text on a Black frame.
-	ppFrameColorsBrowserColors = 1  # Use browser colors for the pane and text.
+	ppFrameColorsBrowserColors = 1  # Use browser colors for the pane and text.    
+	
+	ppFrameColorsPresentationSchemeTextColor = 2  ## Use the Presentation Scheme Text Color.
+	ppFollowColorsTextAndBackground = 2  ## Only the text and background follow the slide's color scheme.    
+	
 	ppFrameColorsPresentationSchemeAccentColor = 3  # Use the Presentation Scheme Accent color.
-	ppFrameColorsPresentationSchemeTextColor = 2  # Use the Presentation Scheme Text Color.
 	ppFrameColorsWhiteTextOnBlack = 4  # Use Black text on a White frame.
+	ppFrameColorsBlackTextOnWhite = 5  # Use White text on a Black frame.
 
 
+@unique
 class PpGuideOrientation(Enum):
 	ppHorizontalGuide = 1  # Represents a horizontal guide, spanning from the left to right of the slide editing window.
 	ppVerticalGuide = 2  # Represents a vertical guide, spanning from top edge to bottom of the slide editing window.
 
 
+@unique
 class PpHTMLVersion(Enum):
-	ppHTMLAutodetect = 4  # Autodetect
-	ppHTMLDual = 3  # Dual version
 	ppHTMLv3 = 1  # HTML Version 3
 	ppHTMLv4 = 2  # HTML Version 4 (Default)
+	ppHTMLDual = 3  # Dual version
+	ppHTMLAutodetect = 4  # Autodetect
+	
 
-
+@unique
 class PpMediaTaskStatus(Enum):
 	ppMediaTaskStatusNone = 0  # No status
 	ppMediaTaskStatusInProgress = 1  # In progress
@@ -767,6 +804,7 @@ class PpMediaTaskStatus(Enum):
 	ppMediaTaskStatusFailed = 4  # Failed
 
 
+@unique
 class PpMediaType(Enum):
 	ppMediaTypeMixed = -2  # Mixed
 	ppMediaTypeMovie = 3  # Movie
@@ -774,11 +812,13 @@ class PpMediaType(Enum):
 	ppMediaTypeSound = 2  # Sound
 
 
+@unique
 class PpMouseActivation(Enum):
 	ppMouseClick = 1  # Mouse click
 	ppMouseOver = 2  # Mouse over
 
 
+@unique
 class PpNumberedBulletStyle(Enum):
 	ppBulletAlphaLCParenBoth = 8  # Lowercase alphabetical characters with both parentheses.
 	ppBulletAlphaLCParenRight = 9  # Lowercase alphabetical characters with closing parenthesis.
@@ -823,6 +863,7 @@ class PpNumberedBulletStyle(Enum):
 	ppBulletTradChinPeriod = 22  # Traditional Chinese with a period.
 	ppBulletTradChinPlain = 21  # Traditional Chinese without a period.
 
+
 @unique
 class PpParagraphAlignment(Enum):
 	"""
@@ -843,6 +884,7 @@ class PpParagraphAlignment(Enum):
 	ppAlignJustifyLow = 7  # Low justify
 
 
+@unique
 class PpPasteDataType(Enum):
 	ppPasteBitmap = 1  # Paste bitmap.
 	ppPasteDefault = 0  # Paste the default content of the clipboard.
@@ -858,6 +900,7 @@ class PpPasteDataType(Enum):
 	ppPasteText = 7  # Paste text.
 
 
+@unique
 class PpPlaceholderType(Enum):
 	ppPlaceholderBitmap = 9  # Bitmap
 	ppPlaceholderBody = 2  # Body
@@ -880,6 +923,7 @@ class PpPlaceholderType(Enum):
 	ppPlaceholderVerticalTitle = 5  # Vertical Title
 
 
+@unique
 class PpPlayerState(Enum):
 	ppPlaying = 0  # Playing
 	ppPaused = 1  # Paused
@@ -887,17 +931,20 @@ class PpPlayerState(Enum):
 	ppNotReady = 3  # Not ready
 
 
+@unique
 class PpPrintColorType(Enum):
 	ppPrintBlackAndWhite = 2  # Black and White
 	ppPrintColor = 1  # Colored
 	ppPrintPureBlackAndWhite = 3  # Pure Black and White
 
 
+@unique
 class PpPrintHandoutOrder(Enum):
 	ppPrintHandoutHorizontalFirst = 2  # Slides are ordered horizontally, with the first slide in the upper-left corner and the second slide to the right of it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide to the left of it.
 	ppPrintHandoutVerticalFirst = 1  # Slides are ordered vertically, with the first slide in the upper-left corner and the second slide below it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide below it.
 
 
+@unique
 class PpPrintOutputType(Enum):
 	ppPrintOutputBuildSlides = 7  # Build Slides
 	ppPrintOutputFourSlideHandouts = 8  # Four Slide Handouts
@@ -911,6 +958,7 @@ class PpPrintOutputType(Enum):
 	ppPrintOutputTwoSlideHandouts = 2  # Two Slide Handouts
 
 
+@unique
 class PpPrintRangeType(Enum):
 	ppPrintAll = 1  # Print all slides in the presentation.
 	ppPrintCurrent = 3  # Print the current slide from the presentation.
@@ -919,18 +967,21 @@ class PpPrintRangeType(Enum):
 	ppPrintSlideRange = 4  # Print a range of slides.
 
 
+@unique
 class PpProtectedViewCloseReason(Enum):
 	ppProtectedViewCloseNormal = 0  # Protected view is being closed normally.
 	ppProtectedViewCloseEdit = 1  # Protected view is being closed so that the presentation can be edited.
 	ppProtectedViewCloseForced = 2  # Protected view is forced closed.
 
 
+@unique
 class PpPublishSourceType(Enum):
 	ppPublishAll = 1  # Publish all.
 	ppPublishNamedSlideShow = 3  # Publish a named slideshow.
 	ppPublishSlideRange = 2  # Publish a range of slides.
 
 
+@unique
 class PpRemoveDocInfoType(Enum):
 	ppRDIAll = 99  # Remove all document information.
 	ppRDIAtMentions = 18  # Remove resolved @mentioned users from comments.
@@ -946,6 +997,7 @@ class PpRemoveDocInfoType(Enum):
 	ppRDISlideUpdateInformation = 17  # Remove slide update information.
 
 
+@unique
 class PpResampleMediaProfile(Enum):
 	ppResampleMediaProfileCustom = 1  # Custom profile
 	ppResampleMediaProfileSmall = 2  # Small profile
@@ -953,12 +1005,14 @@ class PpResampleMediaProfile(Enum):
 	ppResampleMediaProfileSmallest = 4  # Smallest profile
 
 
+@unique
 class PpRevisionInfo(Enum):
+	ppRevisionInfoNone = 0  # No information.
 	ppRevisionInfoBaseline = 1  # Information baseline.
 	ppRevisionInfoMerged = 2  # Information merged.
-	ppRevisionInfoNone = 0  # No information.
 
 
+@unique
 class PpSaveAsFileType(Enum):
 	ppSaveAsAddIn = 8  # 
 	ppSaveAsBMP = 19  # 
@@ -1057,12 +1111,14 @@ class PpSlideLayout(Enum):
 	ppLayoutPictureWithCaption = 36  # Picture with caption
 
 
+@unique
 class PpSlideShowAdvanceMode(Enum):
 	ppSlideShowManualAdvance = 1  # Manual Advance
-	ppSlideShowRehearseNewTimings = 3  # Rehearsed timings
 	ppSlideShowUseSlideTimings = 2  # Specified timings for each slide
+	ppSlideShowRehearseNewTimings = 3  # Rehearsed timings
 
 
+@unique
 class PpSlideShowPointerType(Enum):
 	ppSlideShowPointerAlwaysHidden = 3  # Pointer is always hidden.
 	ppSlideShowPointerArrow = 1  # Arrow pointer used.
@@ -1072,12 +1128,14 @@ class PpSlideShowPointerType(Enum):
 	ppSlideShowPointerPen = 2  # Pen pointer used.
 
 
+@unique
 class PpSlideShowRangeType(Enum):
 	ppShowAll = 1  # Show all.
 	ppShowNamedSlideShow = 3  # Show named slideshow.
 	ppShowSlideRange = 2  # Show slide range.
 
 
+@unique
 class PpSlideShowState(Enum):
 	ppSlideShowBlackScreen = 3  # Black screen
 	ppSlideShowDone = 5  # Done
@@ -1086,12 +1144,14 @@ class PpSlideShowState(Enum):
 	ppSlideShowWhiteScreen = 4  # White screen
 
 
+@unique
 class PpSlideShowType(Enum):
 	ppShowTypeKiosk = 3  # Kiosk
 	ppShowTypeSpeaker = 1  # Speaker
 	ppShowTypeWindow = 2  # Window
 
 
+@unique
 class PpSlideSizeType(Enum):
 	ppSlideSize35MM = 4  # 35MM
 	ppSlideSizeA3Paper = 9  # A3 Paper
@@ -1109,6 +1169,7 @@ class PpSlideSizeType(Enum):
 	ppSlideSizeOverhead = 5  # Overhead
 
 
+@unique
 class PpSoundEffectType(Enum):
 	ppSoundEffectsMixed = -2  # Mixed
 	ppSoundFile = 2  # File
@@ -1116,6 +1177,7 @@ class PpSoundEffectType(Enum):
 	ppSoundStopPrevious = 1  # Stop Previous
 
 
+@unique
 class PpSoundFormatType(Enum):
 	ppSoundFormatCDAudio = 3  # CD Audio format
 	ppSoundFormatMIDI = 2  # MIDI format
@@ -1124,6 +1186,7 @@ class PpSoundFormatType(Enum):
 	ppSoundFormatWAV = 1  # WAV format
 
 
+@unique
 class PpTabStopType(Enum):
 	ppTabStopCenter = 2  # Center tab stop
 	ppTabStopDecimal = 4  # Decimal tab stop
@@ -1132,6 +1195,7 @@ class PpTabStopType(Enum):
 	ppTabStopRight = 3  # Right tab stop
 
 
+@unique
 class PpTextLevelEffect(Enum):
 	ppAnimateByAllLevels = 16  # By all levels
 	ppAnimateByFifthLevel = 5  # By fifth level
@@ -1143,12 +1207,14 @@ class PpTextLevelEffect(Enum):
 	ppAnimateLevelNone = 0  # No level
 
 
+@unique
 class PpTextStyleType(Enum):
 	ppBodyStyle = 3  # Body style
 	ppDefaultStyle = 1  # Default style
 	ppTitleStyle = 2  # Title style
 
 
+@unique
 class PpTextUnitEffect(Enum):
 	ppAnimateByCharacter = 2  # Text-unit effects are animated by character.
 	ppAnimateByParagraph = 0  # Text-unit effects are animated by paragraph.
@@ -1156,6 +1222,7 @@ class PpTextUnitEffect(Enum):
 	ppAnimateUnitMixed = -2  # Text-unit effects are animated in a mixed manner.
 
 
+@unique
 class PpTransitionSpeed(Enum):
 	ppTransitionSpeedFast = 3  # Fast
 	ppTransitionSpeedMedium = 2  # Medium
@@ -1163,12 +1230,14 @@ class PpTransitionSpeed(Enum):
 	ppTransitionSpeedSlow = 1  # Slow
 
 
+@unique
 class PpUpdateOption(Enum):
 	ppUpdateOptionAutomatic = 2  # Link will be updated each time the presentation is opened or the source file changes.
 	ppUpdateOptionManual = 1  # Link will be updated only when the user specifically asks to update the presentation.
 	ppUpdateOptionMixed = -2  # Mixed
 
 
+@unique
 class PpViewType(Enum):
 	ppViewHandoutMaster = 4  # Handout Master
 	ppViewMasterThumbnails = 12  # Master Thumbnails
@@ -1184,12 +1253,14 @@ class PpViewType(Enum):
 	ppViewTitleMaster = 8  # Title Master
 
 
+@unique
 class PpWindowState(Enum):
 	ppWindowMaximized = 3  # Maximized
 	ppWindowMinimized = 2  # Minimized
 	ppWindowNormal = 1  # Normal
 
 
+@unique
 class XlAxisCrosses(Enum):
 	xlAxisCrossesAutomatic = -4105  # Word sets the axis crossing point.
 	xlAxisCrossesCustom = -4114  # The CrossesAt property specifies the axis crossing point.
@@ -1197,23 +1268,27 @@ class XlAxisCrosses(Enum):
 	xlAxisCrossesMinimum = 4  # The axis crosses at the minimum value.
 
 
+@unique
 class XlAxisGroup(Enum):
 	xlPrimary = 1  # The primary axis group.
 	xlSecondary = 2  # The secondary axis group.
 
 
+@unique
 class XlAxisType(Enum):
 	xlCategory = 1  # Axis displays categories.
 	xlSeriesAxis = 3  # Axis displays data series.
 	xlValue = 2  # Axis displays values.
 
 
+@unique
 class XlBackground(Enum):
 	xlBackgroundAutomatic = -4105  # Word controls the background.
 	xlBackgroundOpaque = 3  # An opaque background.
 	xlBackgroundTransparent = 2  # A transparent background.
 
 
+@unique
 class XlBarShape(Enum):
 	xlBox = 0  # A box.
 	xlConeToMax = 5  # A cone, truncated at the specified value.
@@ -1223,6 +1298,7 @@ class XlBarShape(Enum):
 	xlPyramidToPoint = 1  # A pyramid, coming to a point at the specified value.
 
 
+@unique
 class XlBinsType(Enum):
 	xlBinsTypeAutomatic = 0  # Sets bins type automatically.
 	xlBinsTypeCategorical = 1  # Sets bins type by category.
@@ -1231,6 +1307,7 @@ class XlBinsType(Enum):
 	xlBinsTypeBinCount = 4  # Sets bins type by count.
 
 
+@unique
 class XlBorderWeight(Enum):
 	xlHairline = 1  # A hairline border (thinnest border).
 	xlMedium = -4138  # A medium border.
@@ -1238,29 +1315,33 @@ class XlBorderWeight(Enum):
 	xlThin = 2  # A thin border.
 
 
+@unique
 class XlCategoryLabelLevel(Enum):
 	xlCategoryLabelLevelAll = -1  # Use all category label levels within range on the chart. The default.
 	xlCategoryLabelLevelCustom = -2  # Indicates literal data in the category labels.
 	xlCategoryLabelLevelNone = -3  # Use no category labels in the chart. Defaults to automatic indexed labels.
 
-
+@unique
 class XlCategoryType(Enum):
 	xlAutomaticScale = -4105  # Word controls the axis type.
 	xlCategoryScale = 2  # Axis groups data by an arbitrary set of categories.
 	xlTimeScale = 3  # Axis groups data on a time scale.
 
 
+@unique
 class XlChartElementPosition(Enum):
 	xlChartElementPositionAutomatic = -4105  # Automatically sets the position of the chart element.
 	xlChartElementPositionCustom = -4114  # Specifies a specific position for the chart element.
 
 
+@unique
 class XlChartGallery(Enum):
 	xlAnyGallery = 23  # Either of the galleries.
 	xlBuiltIn = 21  # The built-in gallery.
 	xlUserDefined = 22  # The user-defined gallery.
 
 
+@unique
 class XlChartItem(Enum):
 	xlAxis = 21  # Axis.
 	xlAxisTitle = 17  # Axis title.
@@ -1296,6 +1377,7 @@ class XlChartItem(Enum):
 	xlYErrorBars = 11  # Y error bars.
 
 
+@unique
 class XlChartPicturePlacement(Enum):
 	xlAllFaces = 7  # Display on all faces.
 	xlEnd = 2  # Display on end.
@@ -1306,12 +1388,14 @@ class XlChartPicturePlacement(Enum):
 	xlSides = 1  # Display on sides.
 
 
+@unique
 class XlChartPictureType(Enum):
 	xlStack = 2  # The picture is sized to repeat a maximum of 15 times in the longest stacked bar.
 	xlStackScale = 3  # The picture is sized to a specified number of units and repeated the length of the bar.
 	xlStretch = 1  # The picture is stretched the full length of the stacked bar.
 
 
+@unique
 class XlChartSplitType(Enum):
 	xlSplitByCustomSplit = 4  # The second chart displays arbitrary slides.
 	xlSplitByPercentValue = 3  # The second chart displays values less than a percentage of the total value. The percentage is specified by the SplitValue property.
@@ -1319,82 +1403,89 @@ class XlChartSplitType(Enum):
 	xlSplitByValue = 2  # The second chart displays values less than the value specified by the SplitValue property.
 
 
+@unique
 class XlColorIndex(Enum):
 	xlColorIndexAutomatic = -4105  # Automatic color.
 	xlColorIndexNone = -4142  # No color.
 
 
+# Not a unique enumeration
 class XlConstants(Enum):
-	xl3DBar = -4099  # Three-dimensional bar chart group or series.
-	xl3DSurface = -4103  # Three-dimensional surface chart group or series.
-	xlAbove = 0  # The summary row is displayed above the specified range.
+	"""
+	Not a unique enumeration.
+	"""
+	xlTop = -4160  # Top.
+	xlRight = -4152  # Right.
+	xlNone = -4142  # Do not display error bars in the specified chart group or series.
+	xlLow = -4134  # Low.
+	xlLeft = -4131  # Left.
+	xlJustify = -4130  # Justify.
+	xlHigh = -4127  # High.
+	xlGray75 = -4126  # 75% gray pattern.
+	xlGray50 = -4125  # 50% gray pattern.
+	xlGray25 = -4124  # 25% gray pattern.
+	xlDistributed = -4117  # Distributed.
+	xlCustom = -4114  # Word applies custom settings, such as a color or error amount, to the specified object.
+	xlCombination = -4111  # Combination.
+	xlCenter = -4108  # Center.
+	xlBottom = -4107  # Bottom.
 	xlAutomatic = -4105  # Word applies automatic settings, such as a color or page number, to the specified object.
-	xlBar = 2  # Two-dimensional bar chart group or series.
+	xl3DSurface = -4103  # Three-dimensional surface chart group or series.
+	xl3DBar = -4099  # Three-dimensional bar chart group or series.
+	xlDefaultAutoFormat = -1  # Word applies default or automatic formatting.
+	xlAbove = 0  # The summary row is displayed above the specified range.
 	xlBelow = 1  # The summary row is displayed below the specified range.
 	xlBoth = 1  # Display positive and negative error bars in the specified chart group or series.
-	xlBottom = -4107  # Bottom.
-	xlCenter = -4108  # Center.
-	xlChecker = 9  # Checker pattern.
-	xlCircle = 8  # Circle.
-	xlColumn = 3  # Columnar chart group or series.
-	xlCombination = -4111  # Combination.
-	xlCorner = 2  # Corner.
-	xlCrissCross = 16  # Criss-cross pattern.
-	xlCross = 4  # Cross pattern.
-	xlCustom = -4114  # Word applies custom settings, such as a color or error amount, to the specified object.
-	xlDefaultAutoFormat = -1  # Word applies default or automatic formatting.
-	xlDiamond = 2  # Diamond pattern.
-	xlDistributed = -4117  # Distributed.
-	xlFill = 5  # Fill.
 	xlFixedValue = 1  # Display error amounts as a fixed value.
 	xlGeneral = 1  # General.
-	xlGray16 = 17  # 16% gray pattern.
-	xlGray25 = -4124  # 25% gray pattern.
-	xlGray50 = -4125  # 50% gray pattern.
-	xlGray75 = -4126  # 75% gray pattern.
-	xlGray8 = 18  # 8% gray pattern.
-	xlGrid = 15  # Grid pattern.
-	xlHigh = -4127  # High.
-	xlInside = 2  # Inside.
-	xlJustify = -4130  # Justify.
-	xlLeft = -4131  # Left.
-	xlLightDown = 13  # Light down line pattern.
-	xlLightHorizontal = 11  # Light horizontal line pattern.
-	xlLightUp = 14  # Light up line pattern.
-	xlLightVertical = 12  # Light vertical line pattern.
-	xlLow = -4134  # Low.
-	xlMaximum = 2  # Maximum.
-	xlMinimum = 4  # Minimum.
-	xlMinusValues = 3  # Minus values.
-	xlNextToAxis = 4  # Next to axis.
-	xlNone = -4142  # Do not display error bars in the specified chart group or series.
-	xlOpaque = 3  # Opaque fill.
-	xlOutside = 3  # Outside.
-	xlPercent = 2  # Display error amounts as a percentage.
-	xlPlus = 9  # Display positive error bars in the specified chart group or series.
-	xlPlusValues = 2  # Plus values.
-	xlRight = -4152  # Right.
-	xlScale = 3  # Scale.
-	xlSemiGray75 = 10  # 75% semi-gray pattern.
-	xlShowLabel = 4  # Show label.
-	xlShowLabelAndPercent = 5  # Show label and percent.
-	xlShowPercent = 3  # Show percent.
-	xlShowValue = 2  # Show value.
-	xlSingle = 2  # Single line.
 	xlSolid = 1  # Solid pattern.
 	xlSquare = 1  # Square.
-	xlStar = 5  # Star.
-	xlStError = 4  # Display error amounts as a standard error.
-	xlTop = -4160  # Top.
+	xlBar = 2  # Two-dimensional bar chart group or series.
+	xlCorner = 2  # Corner.
+	xlDiamond = 2  # Diamond pattern.
+	xlInside = 2  # Inside.
+	xlMaximum = 2  # Maximum.
+	xlPercent = 2  # Display error amounts as a percentage.
+	xlPlusValues = 2  # Plus values.
+	xlShowValue = 2  # Show value.
+	xlSingle = 2  # Single line.
 	xlTransparent = 2  # Transparent fill.
+	xlColumn = 3  # Columnar chart group or series.
+	xlMinusValues = 3  # Minus values.
+	xlOpaque = 3  # Opaque fill.
+	xlOutside = 3  # Outside.
+	xlScale = 3  # Scale.
+	xlShowPercent = 3  # Show percent.
 	xlTriangle = 3  # Triangle.
+	xlCross = 4  # Cross pattern.
+	xlMinimum = 4  # Minimum.
+	xlNextToAxis = 4  # Next to axis.
+	xlShowLabel = 4  # Show label.
+	xlStError = 4  # Display error amounts as a standard error.
+	xlFill = 5  # Fill.
+	xlShowLabelAndPercent = 5  # Show label and percent.
+	xlStar = 5  # Star.
+	xlCircle = 8  # Circle.
+	xlChecker = 9  # Checker pattern.
+	xlPlus = 9  # Display positive error bars in the specified chart group or series.
+	xlSemiGray75 = 10  # 75% semi-gray pattern.
+	xlLightHorizontal = 11  # Light horizontal line pattern.
+	xlLightVertical = 12  # Light vertical line pattern.
+	xlLightDown = 13  # Light down line pattern.
+	xlLightUp = 14  # Light up line pattern.
+	xlGrid = 15  # Grid pattern.
+	xlCrissCross = 16  # Criss-cross pattern.
+	xlGray16 = 17  # 16% gray pattern.
+	xlGray8 = 18  # 8% gray pattern.
 
 
+@unique
 class XlCopyPictureFormat(Enum):
 	xlBitmap = 2  # A bitmap (.bmp, .jpg, .gif).
 	xlPicture = -4147  # A drawn picture (.png, .wmf, .mix).
 
 
+@unique
 class XlDataLabelPosition(Enum):
 	xlLabelPositionAbove = 0  # The data label is positioned above the data point.
 	xlLabelPositionBelow = 1  # The data label is positioned below the data point.
@@ -1409,10 +1500,12 @@ class XlDataLabelPosition(Enum):
 	xlLabelPositionRight = -4152  # The data label is positioned to the right of the data point.
 
 
+@unique
 class XlDataLabelSeparator(Enum):
 	xlDataLabelSeparatorDefault = 1  # Word selects the separator.
 
 
+@unique
 class XlDataLabelsType(Enum):
 	xlDataLabelsShowBubbleSizes = 6  # Show the size of the bubble in reference to the absolute value.
 	xlDataLabelsShowLabel = 4  # The category for the point.
@@ -1422,12 +1515,14 @@ class XlDataLabelsType(Enum):
 	xlDataLabelsShowValue = 2  # The default value for the point (assumed if this argument is not specified).
 
 
+@unique
 class XlDisplayBlanksAs(Enum):
 	xlInterpolated = 3  # Values are interpolated into the chart.
 	xlNotPlotted = 1  # Blank cells are not plotted.
 	xlZero = 2  # Blanks are plotted as zero.
 
 
+@unique
 class XlDisplayUnit(Enum):
 	xlHundredMillions = -8  # Hundreds of millions.
 	xlHundreds = -2  # Hundreds.
@@ -1440,15 +1535,19 @@ class XlDisplayUnit(Enum):
 	xlThousands = -3  # Thousands.
 
 
+@unique
 class XlEndStyleCap(Enum):
 	xlCap = 1  # Caps are applied.
 	xlNoCap = 2  # No caps are applied.
 
+
+@unique
 class XlErrorBarDirection(Enum):
 	xlChartX = -4168  # Bars run parallel to the y-axis for x-axis values.
 	xlChartY = 1  # Bars run parallel to the x-axis for y-axis values.
 
 
+@unique
 class XlErrorBarInclude(Enum):
 	xlErrorBarIncludeBoth = 1  # Both the positive and negative error range.
 	xlErrorBarIncludeMinusValues = 3  # Only the negative error range.
@@ -1456,6 +1555,7 @@ class XlErrorBarInclude(Enum):
 	xlErrorBarIncludePlusValues = 2  # Only the positive error range.
 
 
+@unique
 class XlErrorBarType(Enum):
 	xlErrorBarTypeCustom = -4114  # The range is set by fixed values or cell values.
 	xlErrorBarTypeFixedValue = 1  # Fixed-length error bars.
@@ -1464,6 +1564,7 @@ class XlErrorBarType(Enum):
 	xlErrorBarTypeStError = 4  # Shows the standard error range.
 
 
+@unique
 class XlHAlign(Enum):
 	xlHAlignCenter = -4108  # Center.
 	xlHAlignCenterAcrossSelection = 7  # Center across selection.
@@ -1475,6 +1576,7 @@ class XlHAlign(Enum):
 	xlHAlignRight = -4152  # Right.
 
 
+@unique
 class XlLegendPosition(Enum):
 	xlLegendPositionBottom = -4107  # Below the chart.
 	xlLegendPositionCorner = 2  # In the upper-right corner of the chart border.
@@ -1484,6 +1586,7 @@ class XlLegendPosition(Enum):
 	xlLegendPositionTop = -4160  # Above the chart.
 
 
+@unique
 class XlLineStyle(Enum):
 	xlContinuous = 1  # A continuous line.
 	xlDash = -4115  # A dashed line.
@@ -1495,6 +1598,7 @@ class XlLineStyle(Enum):
 	xlSlantDashDot = 13  # Slanted dashes.
 
 
+@unique
 class XlMarkerStyle(Enum):
 	xlMarkerStyleAutomatic = -4105  # Automatic markers.
 	xlMarkerStyleCircle = 8  # Circular markers.
@@ -1510,6 +1614,7 @@ class XlMarkerStyle(Enum):
 	xlMarkerStyleX = -4168  # Square markers with an X.
 
 
+@unique
 class XlOrientation(Enum):
 	xlDownward = -4170  # Text runs downward.
 	xlHorizontal = -4128  # Text runs horizontally.
@@ -1517,12 +1622,14 @@ class XlOrientation(Enum):
 	xlVertical = -4166  # Text runs downward and is centered in the cell.
 
 
+@unique
 class XlParentDataLabelOptions(Enum):
 	xlParentDataLabelOptionsNone = 0  # No parent labels are shown.
 	xlParentDataLabelOptionsBanner = 1  # The parent label layout is a banner above the category.
 	xlParentDataLabelOptionsOverlapping = 2  # The parent label is laid out within the category.
 
 
+@unique
 class XlPattern(Enum):
 	xlPatternAutomatic = -4105  # Word controls the pattern.
 	xlPatternChecker = 9  # A checkerboard.
@@ -1548,11 +1655,13 @@ class XlPattern(Enum):
 	xlPatternVertical = -4166  # Dark vertical bars.
 
 
+@unique
 class XlPictureAppearance(Enum):
 	xlPrinter = 2  # The picture is copied as it will look when it is printed.
 	xlScreen = 1  # The picture is copied to resemble its display on the screen as closely as possible.
 
 
+@unique
 class XlPieSliceIndex(Enum):
 	xlCenterPoint = 5  # The center point of a pie slice.
 	xlInnerCenterPoint = 8  # The innermost center point of a doughnut slice.
@@ -1565,6 +1674,7 @@ class XlPieSliceIndex(Enum):
 	xlOuterCounterClockwisePoint = 1  # The outermost counterclockwise point of the circumference of a slice.
 
 
+@unique
 class XlPieSliceLocation(Enum):
 	xlCenterPoint = 5  # The center point of a pie slice.
 	xlInnerCenterPoint = 8  # The innermost center point of a doughnut slice.
@@ -1577,6 +1687,7 @@ class XlPieSliceLocation(Enum):
 	xlOuterCounterClockwisePoint = 1  # The outermost counterclockwise point of the circumference of a slice.
 
 
+@unique
 class XlPivotFieldOrientation(Enum):
 	xlColumnField = 2  # A column field.
 	xlDataField = 4  # A data field.
@@ -1585,12 +1696,14 @@ class XlPivotFieldOrientation(Enum):
 	xlRowField = 1  # A row field.
 
 
+@unique
 class XlReadingOrder(Enum):
 	xlContext = -5002  # According to context.
 	xlLTR = -5003  # Left-to-right.
 	xlRTL = -5004  # Right-to-left.
 
 
+@unique
 class XlRgbColor(Enum):
 	xlAliceBlue = 16775408  # Alice Blue
 	xlAntiqueWhite = 14150650  # Antique White
@@ -1614,7 +1727,6 @@ class XlRgbColor(Enum):
 	xlDarkBlue = 9109504  # Dark Blue
 	xlDarkCyan = 9145088  # Dark Cyan
 	xlDarkGoldenrod = 755384  # Dark Goldenrod
-	xlDarkGray = 11119017  # Dark Gray
 	xlDarkGreen = 25600  # Dark Green
 	xlDarkGrey = 11119017  # Dark Grey
 	xlDarkKhaki = 7059389  # Dark Khaki
@@ -1626,14 +1738,12 @@ class XlRgbColor(Enum):
 	xlDarkSalmon = 8034025  # Dark Salmon
 	xlDarkSeaGreen = 9419919  # Dark Sea Green
 	xlDarkSlateBlue = 9125192  # Dark Slate Blue
-	xlDarkSlateGray = 5197615  # Dark Slate Gray
 	xlDarkSlateGrey = 5197615  # Dark Slate Grey
 	xlDarkTurquoise = 13749760  # Dark Turquoise
 	xlDarkViolet = 13828244  # Dark Violet
 	xlDeepPink = 9639167  # Deep Pink
 	xlDeepSkyBlue = 16760576  # Deep Sky Blue
 	xlDimGray = 6908265  # Dim Gray
-	xlDimGrey = 6908265  # Dim Grey
 	xlDodgerBlue = 16748574  # Dodger Blue
 	xlFireBrick = 2237106  # Fire Brick
 	xlFloralWhite = 15792895  # Floral White
@@ -1643,7 +1753,6 @@ class XlRgbColor(Enum):
 	xlGhostWhite = 16775416  # Ghost White
 	xlGold = 55295  # Gold
 	xlGoldenrod = 2139610  # Goldenrod
-	xlGray = 8421504  # Gray
 	xlGreen = 32768  # Green
 	xlGreenYellow = 3145645  # Green Yellow
 	xlGrey = 8421504  # Grey
@@ -1659,9 +1768,7 @@ class XlRgbColor(Enum):
 	xlLemonChiffon = 13499135  # Lemon Chiffon
 	xlLightBlue = 15128749  # Light Blue
 	xlLightCoral = 8421616  # Light Coral
-	xlLightCyan = 9145088  # Light Cyan
 	xlLightGoldenrodYellow = 13826810  # LightGoldenrodYellow
-	xlLightGray = 13882323  # Light Gray
 	xlLightGreen = 9498256  # Light Green
 	xlLightGrey = 13882323  # Light Grey
 	xlLightPink = 12695295  # Light Pink
@@ -1669,7 +1776,6 @@ class XlRgbColor(Enum):
 	xlLightSeaGreen = 11186720  # Light Sea Green
 	xlLightSkyBlue = 16436871  # Light Sky Blue
 	xlLightSlateGray = 10061943  # Light Slate Gray
-	xlLightSlateGrey = 10061943  # Light Slate Grey
 	xlLightSteelBlue = 14599344  # Light Steel Blue
 	xlLightYellow = 14745599  # Light Yellow
 	xlLime = 65280  # Lime
@@ -1691,7 +1797,6 @@ class XlRgbColor(Enum):
 	xlMoccasin = 11920639  # Moccasin
 	xlNavajoWhite = 11394815  # Navajo White
 	xlNavy = 8388608  # Navy
-	xlNavyBlue = 8388608  # Navy Blue
 	xlOldLace = 15136253  # Old Lace
 	xlOlive = 32896  # Olive
 	xlOliveDrab = 2330219  # Olive Drab
@@ -1720,7 +1825,6 @@ class XlRgbColor(Enum):
 	xlSilver = 12632256  # Silver
 	xlSkyBlue = 15453831  # Sky Blue
 	xlSlateBlue = 13458026  # Slate Blue
-	xlSlateGray = 9470064  # Slate Gray
 	xlSlateGrey = 9470064  # Slate Grey
 	xlSnow = 16448255  # Snow
 	xlSpringGreen = 8388352  # Spring Green
@@ -1738,27 +1842,32 @@ class XlRgbColor(Enum):
 	xlYellowGreen = 3329434  # Yellow Green
 
 
+@unique
 class XlRowCol(Enum):
 	xlColumns = 2  # The data series is in a row.
 	xlRows = 1  # The data series is in a column.
 
 
+@unique
 class XlScaleType(Enum):
 	xlScaleLinear = -4132  # A linear scale.
 	xlScaleLogarithmic = -4133  # A logarithmic scale.
 
 
+@unique
 class XlSeriesNameLevel(Enum):
 	xlSeriesNameLevelAll = -1  # Sets series names to all series name levels within range on the chart. The default.
 	xlSeriesNameLevelCustom = -2  # Indicates literal data in the series names.
 	xlSeriesNameLevelNone = -3  # Sets no series names in the chart.
 
 
+@unique
 class XlSizeRepresents(Enum):
 	xlSizeIsArea = 1  # The area of the bubble.
 	xlSizeIsWidth = 2  # The width of the bubble.
 
 
+@unique
 class XlTickLabelOrientation(Enum):
 	xlTickLabelOrientationAutomatic = -4105  # The text orientation is set by Microsoft Word.
 	xlTickLabelOrientationDownward = -4170  # The text runs downward.
@@ -1767,6 +1876,7 @@ class XlTickLabelOrientation(Enum):
 	xlTickLabelOrientationVertical = -4166  # The characters run vertically.
 
 
+@unique
 class XlTickLabelPosition(Enum):
 	xlTickLabelPositionHigh = -4127  # The top or right side of the chart.
 	xlTickLabelPositionLow = -4134  # The bottom or left side of the chart.
@@ -1774,6 +1884,7 @@ class XlTickLabelPosition(Enum):
 	xlTickLabelPositionNone = -4142  # No tick marks.
 
 
+@unique
 class XlTickMark(Enum):
 	xlTickMarkCross = 4  # Crosses the axis.
 	xlTickMarkInside = 2  # Inside the axis.
@@ -1781,12 +1892,14 @@ class XlTickMark(Enum):
 	xlTickMarkOutside = 3  # Outside the axis.
 
 
+@unique
 class XlTimeUnit(Enum):
 	xlDays = 0  # Days
 	xlMonths = 1  # Months
 	xlYears = 2  # Years
 
 
+@unique
 class XlTrendlineType(Enum):
 	xlExponential = 5  # Uses an equation to calculate the least squares fit through points (for example, y=ab^x) .
 	xlLinear = -4132  # Uses the linear equation y = mx + b to calculate the least squares fit through points.
@@ -1794,13 +1907,9 @@ class XlTrendlineType(Enum):
 	xlMovingAvg = 6  # Uses a sequence of averages computed from parts of the data series. The number of points equals the total number of points in the series minus the number specified for the period.
 	xlPolynomial = 3  # Uses an equation to calculate the least squares fit through points (for example, y = ax^6 + bx^5 + cx^4 + dx^3 + ex^2 + fx + g).
 	xlPower = 4  # Uses an equation to calculate the least squares fit through points (for example, y = ax^b).
-	xlUnderlineStyleDouble = -4119  # Double thick underline.
-	xlUnderlineStyleDoubleAccounting = 5  # Two thin underlines placed close together.
-	xlUnderlineStyleNone = -4142  # No underline.
-	xlUnderlineStyleSingle = 2  # Single underline.
-	xlUnderlineStyleSingleAccounting = 4  # Not supported.
 
 
+@unique
 class XlVAlign(Enum):
 	xlVAlignBottom = -4107  # Bottom alignment.
 	xlVAlignCenter = -4108  # Center alignment.
