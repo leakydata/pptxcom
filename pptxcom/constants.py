@@ -1,6 +1,17 @@
-class MsoAnimAccumulate:
-	msoAnimAccumulateAlways = 2  # Accumulates with other animation behaviors.
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug  4 15:33:33 2019
+
+@author: Nathan Jones
+"""
+
+from enum import Enum, unique
+
+@unique
+class MsoAnimAccumulate(Enum):
 	msoAnimAccumulateNone = 1  # Does not accumulate.
+	msoAnimAccumulateAlways = 2  # Accumulates with other animation behaviors.
+
 
 
 class MsoAnimAdditive:
@@ -399,31 +410,48 @@ class MsoClickState:
 	msoClickStateBeforeAutomaticAnimations = -1  # Before automatic animations.
 
 
-class msoShapeType:
-	msoAutoShape = 1  # AutoShape (1)
-	msoCallout = 2  # Callout (2)
-	msoCanvas = 20  # Canvas (20)
-	msoChart = 3  # Chart (3)
-	msoComment = 4  # Comment (4)
-	msoDiagram = 21  # Diagram (21)
-	msoEmbeddedOLEObject = 7  # EmbeddedOLEObject (7)
-	msoFormControl = 8  # FormControl (8)
-	msoFreeform = 5  # Freeform (5)
-	msoGroup = 6  # Group (6)
-	msoInk = 22  # Ink (22)
-	msoInkComment = 23  # InkComment (23)
-	msoLine = 9  # Line (9)
-	msoLinkedOLEObject = 10  # LinkedOLEObject (10)
-	msoLinkedPicture = 11  # LinkedPicture (11)
-	msoMedia = 16  # Media (16)
-	msoOLEControlObject = 12  # OLEControlObject (12)
-	msoPicture = 13  # Picture (13)
-	msoPlaceholder = 14  # Placeholder (14)
-	msoScriptAnchor = 18  # ScriptAnchor (18)
-	msoShapeTypeMixed = -2  # ShapeTypeMixed (-2)
-	msoTable = 19  # Table (19)
-	msoTextBox = 17  # TextBox (17)
-	msoTextEffect = 15  # TextEffect (15)
+@unique
+class MsoShapeType(Enum):
+    """    
+    @Enum: inherets methods from the Enum class
+    
+    This class represents the various shape types available in PowerPoint.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/office.msoshapetype
+    """
+    
+    msoShapeTypeMixed = -2  # ShapeTypeMixed (-2)
+    msoAutoShape = 1  # AutoShape (1)
+    msoCallout = 2  # Callout (2)
+    msoChart = 3  # Chart (3)
+    msoComment = 4  # Comment (4)
+    msoFreeform = 5  # Freeform (5)
+    msoGroup = 6  # Group (6)
+    msoEmbeddedOLEObject = 7  # EmbeddedOLEObject (7)
+    msoFormControl = 8  # FormControl (8)
+    msoLine = 9  # Line (9)
+    msoLinkedOLEObject = 10  # LinkedOLEObject (10)
+    msoLinkedPicture = 11  # LinkedPicture (11)
+    msoOLEControlObject = 12  # OLEControlObject (12)
+    msoPicture = 13  # Picture (13)
+    msoPlaceholder = 14  # Placeholder (14)
+    msoTextEffect = 15  # TextEffect (15)
+    msoMedia = 16  # Media (16)
+    msoTextBox = 17  # TextBox (17)
+    msoScriptAnchor = 18  # ScriptAnchor (18)
+    msoTable = 19  # Table (19)
+    msoCanvas = 20  # Canvas (20)
+    msoDiagram = 21  # Diagram (21)
+    msoInk = 22  # Ink (22)
+    msoInkComment = 23  # InkComment (23)
+    msoIgxGraphic = 24  # SmartArt graphic
+    # There is no 25
+    msoWebVideo = 26  # Web video
+    msoContentApp = 27  # Content Office Add-in
+    msoGraphic = 28  # Graphic
+    msoLinkedGraphic = 29  # Linked graphic
+    mso3DModel = 30  # 3D model
+    msoLinked3DModel = 31  # Linked 3D model
 
 
 class PpActionType:
@@ -496,20 +524,38 @@ class PpBorderType:
 	ppBorderTop = 1  # Top
 
 
-class PpBulletType:
-	ppBulletMixed = -2  # Mixed bullets
-	ppBulletNone = 0  # No bullets
-	ppBulletNumbered = 2  # Numbered bullets
-	ppBulletPicture = 3  # Bullets with an image
-	ppBulletUnnumbered = 1  # Unnumbered bullets
+@unique    
+class PpBulletType(Enum):
+    """    
+    @Enum: inherets methods from the Enum class
+    
+    Specifies the type of bullet.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppbullettype
+    """
+    
+    ppBulletMixed = -2  # Mixed bullets
+    ppBulletNone = 0  # No bullets
+    ppBulletUnnumbered = 1  # Unnumbered bullets
+    ppBulletNumbered = 2  # Numbered bullets
+    ppBulletPicture = 3  # Bullets with an image
 
 
-class PpChangeCase:
-	ppCaseLower = 2  # Change to lowercase.
-	ppCaseSentence = 1  # Change to lowercase.
-	ppCaseTitle = 4  # Change to title case.
-	ppCaseToggle = 5  # Toggle the casing.
-	ppCaseUpper = 3  # Change to uppercase.
+@unique
+class PpChangeCase(Enum):
+    """
+    @Enum: inherets methods from the Enum class
+    
+    Specifies the way the case of the specified text will be changed.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppchangecase
+    """
+    
+    ppCaseSentence = 1  # Change to lowercase.
+    ppCaseLower = 2  # Change to lowercase.
+    ppCaseUpper = 3  # Change to uppercase.
+    ppCaseTitle = 4  # Change to title case.
+    ppCaseToggle = 5  # Toggle upper and lower casing.
 
 
 class PpChartUnitEffect:
@@ -527,17 +573,26 @@ class PpCheckInVersionType:
 	ppCheckInOverwriteVersion = 2  # Overwrite current version
 
 
-class PpColorSchemeIndex:
-	ppAccent1 = 6  # Accent1
-	ppAccent2 = 7  # Accent2
-	ppAccent3 = 8  # Accent3
-	ppBackground = 1  # Background
-	ppFill = 5  # Fill
-	ppForeground = 2  # Foreground
-	ppNotSchemeColor = 0  # Not scheme color
-	ppSchemeColorMixed = -2  # Mixed scheme color
-	ppShadow = 3  # Shadow
-	ppTitle = 4  # Title
+@unique
+class PpColorSchemeIndex(Enum):
+    """
+    @Enum: inherets methods from the Enum class
+    
+    Specifies the color in the applied color scheme that is associated with the specified object.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppcolorschemeindex
+    """
+    
+    ppSchemeColorMixed = -2  # Mixed scheme color
+    ppNotSchemeColor = 0  # Not scheme color
+    ppBackground = 1  # Background
+    ppForeground = 2  # Foreground
+    ppShadow = 3  # Shadow
+    ppTitle = 4  # Title
+    ppFill = 5  # Fill
+    ppAccent1 = 6  # Accent1
+    ppAccent2 = 7  # Accent2
+    ppAccent3 = 8  # Accent3
 
 
 class PpDateTimeFormat:
@@ -768,16 +823,24 @@ class PpNumberedBulletStyle:
 	ppBulletTradChinPeriod = 22  # Traditional Chinese with a period.
 	ppBulletTradChinPlain = 21  # Traditional Chinese without a period.
 
-
-class PpParagraphAlignment:
-	ppAlignCenter = 2  # Center align
-	ppAlignDistribute = 5  # Distribute
-	ppAlignJustify = 4  # Justify
-	ppAlignJustifyLow = 7  # Low justify
-	ppAlignLeft = 1  # Left aligned
-	ppAlignmentMixed = -2  # Mixed alignment
-	ppAlignRight = 3  # Right-aligned
-	ppAlignThaiDistribute = 6  # Thai distributed
+@unique
+class PpParagraphAlignment(Enum):
+    """
+    @Enum: inherets methods from the Enum class
+    
+    Specifies the alignment for each paragraph in the specified paragraph format.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppparagraphalignment    
+    """
+    
+    ppAlignmentMixed = -2  # Mixed alignment
+    ppAlignLeft = 1  # Left aligned
+    ppAlignCenter = 2  # Center align
+    ppAlignRight = 3  # Right-aligned
+    ppAlignJustify = 4  # Justify
+    ppAlignDistribute = 5  # Distribute
+    ppAlignThaiDistribute = 6  # Thai distributed
+    ppAlignJustifyLow = 7  # Low justify
 
 
 class PpPasteDataType:
@@ -929,51 +992,69 @@ class PpSaveAsFileType:
 	ppSaveAsXPS = 33  # 
 
 
-class PpSelectionType:
-	ppSelectionNone = 0  # None
-	ppSelectionShapes = 2  # Shapes
-	ppSelectionSlides = 1  # Slides
-	ppSelectionText = 3  # Text
+@unique
+class PpSelectionType(Enum):
+    """
+    @Enum: inherets methods from the Enum class
+    
+    Constants that specify the type of selection, returned by the Type property of the Selection object.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppselectiontype
+    """
+    
+    ppSelectionNone = 0  # None
+    ppSelectionSlides = 1  # Slides
+    ppSelectionShapes = 2  # Shapes
+    ppSelectionText = 3  # Text
 
 
-class PpSlideLayout:
-	ppLayoutBlank = 12  # Blank
-	ppLayoutChart = 8  # Chart
-	ppLayoutChartAndText = 6  # Chart and text
-	ppLayoutClipArtAndText = 10  # ClipArt and text
-	ppLayoutClipArtAndVerticalText = 26  # ClipArt and vertical text
-	ppLayoutComparison = 34  # Comparison
-	ppLayoutContentWithCaption = 35  # Content with caption
-	ppLayoutCustom = 32  # Custom
-	ppLayoutFourObjects = 24  # Four objects
-	ppLayoutLargeObject = 15  # Large object
-	ppLayoutMediaClipAndText = 18  # MediaClip and text
-	ppLayoutMixed = -2  # Mixed
-	ppLayoutObject = 16  # Object
-	ppLayoutObjectAndText = 14  # Object and text
-	ppLayoutObjectAndTwoObjects = 30  # Object and two objects
-	ppLayoutObjectOverText = 19  # Object over text
-	ppLayoutOrgchart = 7  # Organization chart
-	ppLayoutPictureWithCaption = 36  # Picture with caption
-	ppLayoutSectionHeader = 33  # Section header
-	ppLayoutTable = 4  # Table
-	ppLayoutText = 2  # Text
-	ppLayoutTextAndChart = 5  # Text and chart
-	ppLayoutTextAndClipArt = 9  # Text and ClipArt
-	ppLayoutTextAndMediaClip = 17  # Text and MediaClip
-	ppLayoutTextAndObject = 13  # Text and object
-	ppLayoutTextAndTwoObjects = 21  # Text and two objects
-	ppLayoutTextOverObject = 20  # Text over object
-	ppLayoutTitle = 1  # Title
-	ppLayoutTitleOnly = 11  # Title only
-	ppLayoutTwoColumnText = 3  # Two-column text
-	ppLayoutTwoObjects = 29  # Two objects
-	ppLayoutTwoObjectsAndObject = 31  # Two objects and object
-	ppLayoutTwoObjectsAndText = 22  # Two objects and text
-	ppLayoutTwoObjectsOverText = 23  # Two objects over text
-	ppLayoutVerticalText = 25  # Vertical text
-	ppLayoutVerticalTitleAndText = 27  # Vertical title and text
-	ppLayoutVerticalTitleAndTextOverChart = 28  # Vertical title and text over chart
+@unique
+class PpSlideLayout(Enum):
+    """
+    @Enum: inherets methods from the Enum class
+    
+    Constants that specify the layout of the slide, passed to and returned by the Layout property of the Slide and SlideRange objects.
+    
+    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppslidelayout
+    """
+    
+    ppLayoutMixed = -2  # Mixed
+    ppLayoutTitle = 1  # Title
+    ppLayoutText = 2  # Text
+    ppLayoutTwoColumnText = 3  # Two-column text
+    ppLayoutTable = 4  # Table
+    ppLayoutTextAndChart = 5  # Text and chart
+    ppLayoutChartAndText = 6  # Chart and text
+    ppLayoutOrgchart = 7  # Organization chart
+    ppLayoutChart = 8  # Chart
+    ppLayoutTextAndClipArt = 9  # Text and ClipArt
+    ppLayoutClipArtAndText = 10  # ClipArt and text
+    ppLayoutTitleOnly = 11  # Title only
+    ppLayoutBlank = 12  # Blank
+    ppLayoutTextAndObject = 13  # Text and object
+    ppLayoutObjectAndText = 14  # Object and text
+    ppLayoutLargeObject = 15  # Large object
+    ppLayoutObject = 16  # Object
+    ppLayoutTextAndMediaClip = 17  # Text and MediaClip
+    ppLayoutMediaClipAndText = 18  # MediaClip and text
+    ppLayoutObjectOverText = 19  # Object over text
+    ppLayoutTextOverObject = 20  # Text over object
+    ppLayoutTextAndTwoObjects = 21  # Text and two objects
+    ppLayoutTwoObjectsAndText = 22  # Two objects and text
+    ppLayoutTwoObjectsOverText = 23  # Two objects over text
+    ppLayoutFourObjects = 24  # Four objects
+    ppLayoutVerticalText = 25  # Vertical text
+    ppLayoutClipArtAndVerticalText = 26  # ClipArt and vertical text
+    ppLayoutVerticalTitleAndText = 27  # Vertical title and text
+    ppLayoutVerticalTitleAndTextOverChart = 28  # Vertical title and text over chart
+    ppLayoutTwoObjects = 29  # Two objects
+    ppLayoutObjectAndTwoObjects = 30  # Object and two objects
+    ppLayoutTwoObjectsAndObject = 31  # Two objects and object
+    ppLayoutCustom = 32  # Custom
+    ppLayoutSectionHeader = 33  # Section header
+    ppLayoutComparison = 34  # Comparison
+    ppLayoutContentWithCaption = 35  # Content with caption
+    ppLayoutPictureWithCaption = 36  # Picture with caption
 
 
 class PpSlideShowAdvanceMode:
