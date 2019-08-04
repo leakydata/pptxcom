@@ -10,6 +10,11 @@ import win32com.client.gencache as win32ClientGen
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
 def grab_active(visible=True):
+    """
+    Grabs the active PowerPoint application and creates a COM object
+    representing the application.
+    """
+    
     try:
         p = win32Client.GetActiveObject("PowerPoint.Application")
     except com_error:
