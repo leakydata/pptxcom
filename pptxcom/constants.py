@@ -1394,7 +1394,7 @@ class XlHAlign:
 	xlHAlignRight = -4152  # Right.
 
 
-class XlLegendPosition;
+class XlLegendPosition:
 	xlLegendPositionBottom = -4107  # Below the chart.
 	xlLegendPositionCorner = 2  # In the upper-right corner of the chart border.
 	xlLegendPositionCustom = -4161  # A custom position.
