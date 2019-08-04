@@ -1,23 +1,23 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-# This is example code. This library is not ready for distribution
-"""
+with open("README.md", "r") as readme_file:
+    readme = readme_file.read()
+
+requirements = ["pywin32>=223", "pandas>=0.24.2", "comtypes>=1.1.7"]
+
 setup(
-    # Needed to silence warnings (and to be a worthwhile package)
-    name='Measurements',
-    url='https://github.com/jladan/package_demo',
-    author='John Ladan',
-    author_email='jladan@uwaterloo.ca',
-    # Needed to actually package something
-    packages=['measure'],
-    # Needed for dependencies
-    install_requires=['numpy'],
-    # *strongly* suggested for sharing
-    version='0.1',
-    # The license can be anything you like
-    license='MIT',
-    description='An example of a python package from pre-existing code',
-    # We will also need a readme eventually (there will be a warning)
-    # long_description=open('README.txt').read(),
+    name="pptxcom",
+    version="0.0.1",
+    author="Nathan Jones",
+    author_email="leakydata@gmail.com",
+    description="A package to interact with MS Office PowerPoint COM objects",
+    long_description=readme,
+    long_description_content_type="text/markdown",
+    url="https://github.com/leakydata/pptxcom",
+    packages=find_packages(),
+    install_requires=requirements,
+    classifiers=[
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    ],
 )
-"""
