@@ -3,7 +3,7 @@ Python library for creating, editing, and controlling Microsoft's PowerPoint pre
 
 ## Getting Started
 ### Installing
-`pip install git+https://github.com/jladan/package_demo.git`
+`pip install git+https://github.com/leakydata/pptxcom@v0.0.1`
 
 ## Built With
 * [pywin32](https://github.com/mhammond/pywin32) - Python for Windows (pywin32) Extensions
