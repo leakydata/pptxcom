@@ -11,6 +11,8 @@ from pywintypes import com_error  # pylint: disable=I0011,E0611
 
 def grab_active(visible=True):
     """
+    @visible: Set PowerPoint application window to visible
+    
     Grabs the active PowerPoint application and creates a COM object
     representing the application.
     """
