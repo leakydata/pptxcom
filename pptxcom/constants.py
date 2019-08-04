@@ -2,7 +2,7 @@
 """
 Created on Sun Aug 4 15:33:33 2019
 
-@author(Enum): Nathan Jones
+@author: Nathan Jones
 """
 
 from enum import Enum, unique
