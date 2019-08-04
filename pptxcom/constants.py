@@ -1,6 +1,7 @@
-# -*- coding: utf-8 -*-
+# -*- coding(Enum): utf-8 -*-
 """
 Created on Sun Aug 4 15:33:33 2019
+
 @author: Nathan Jones
 """
 
@@ -9,7 +10,7 @@ from enum import Enum, unique
 @unique
 class MsoAnimAccumulate(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimAccumulateNone = 1  # Does not accumulate.
@@ -18,7 +19,7 @@ class MsoAnimAccumulate(Enum):
 @unique
 class MsoAnimAdditive(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimAdditiveAddBase = 1  # Uses the animation behavior of the base animations.
@@ -28,7 +29,7 @@ class MsoAnimAdditive(Enum):
 @unique
 class MsoAnimAfterEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimAfterEffectMixed = -1  # Mixed
@@ -41,7 +42,7 @@ class MsoAnimAfterEffect(Enum):
 @unique
 class MsoAnimateByLevel(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimateChartAllAtOnce = 7  # Animate chart all at once
@@ -77,7 +78,7 @@ class MsoAnimateByLevel(Enum):
 @unique
 class MsoAnimCommandType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimCommandTypeEvent = 0  # Event
@@ -88,7 +89,7 @@ class MsoAnimCommandType(Enum):
 @unique
 class MsoAnimDirection(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimDirectionAcross = 18  # Across
@@ -141,7 +142,7 @@ class MsoAnimDirection(Enum):
 @unique
 class MsoAnimEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimEffectCustom = 0  # Custom Effect
@@ -299,7 +300,7 @@ class MsoAnimEffect(Enum):
 @unique
 class MsoAnimEffectAfter(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimEffectAfterFreeze = 1  # After freeze.
@@ -311,7 +312,7 @@ class MsoAnimEffectAfter(Enum):
 @unique
 class MsoAnimEffectRestart(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimEffectRestartAlways = 1  # Always restarts.
@@ -322,7 +323,7 @@ class MsoAnimEffectRestart(Enum):
 @unique
 class MsoAnimFilterEffectSubtype(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimFilterEffectSubtypeAcross = 9  # Across
@@ -357,7 +358,7 @@ class MsoAnimFilterEffectSubtype(Enum):
 @unique
 class MsoAnimFilterEffectType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimFilterEffectTypeBarn = 1  # Barn
@@ -384,7 +385,7 @@ class MsoAnimFilterEffectType(Enum):
 @unique
 class MsoAnimProperty(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimColor = 7  # Color
@@ -435,7 +436,7 @@ class MsoAnimProperty(Enum):
 @unique
 class MsoAnimTextUnitEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimTextUnitEffectMixed = -1  # Mixed effect.
@@ -447,7 +448,7 @@ class MsoAnimTextUnitEffect(Enum):
 @unique
 class MsoAnimTriggerType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimTriggerAfterPrevious = 3  # After the Previous button is clicked.
@@ -461,7 +462,7 @@ class MsoAnimTriggerType(Enum):
 @unique
 class MsoAnimType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoAnimTypeNone = 0  # None
@@ -479,7 +480,7 @@ class MsoAnimType(Enum):
 @unique
 class MsoClickState(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	msoClickStateAfterAllAnimations = -2  # After all animations.
@@ -489,7 +490,7 @@ class MsoClickState(Enum):
 @unique
 class MsoShapeType(Enum):
 	"""    
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	This class represents the various shape types available in PowerPoint.
 	
@@ -533,7 +534,7 @@ class MsoShapeType(Enum):
 @unique
 class PpActionType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppActionEndShow = 6  # Slide show ends.
@@ -555,7 +556,7 @@ class PpActionType(Enum):
 @unique
 class PpAdvanceMode(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAdvanceModeMixed = -2  # Mixed mode.
@@ -566,7 +567,7 @@ class PpAdvanceMode(Enum):
 @unique
 class PpAfterEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAfterEffectDim = 2  # Appears dimmed
@@ -579,7 +580,7 @@ class PpAfterEffect(Enum):
 @unique
 class PpAlertLevel(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAlertsNone = 1  # No alerts displayed.
@@ -589,7 +590,7 @@ class PpAlertLevel(Enum):
 @unique
 class PpArrangeStyle(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppArrangeTiled = 1  # Tiled
@@ -599,7 +600,7 @@ class PpArrangeStyle(Enum):
 @unique
 class PpAutoSize(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAutoSizeMixed = -2  # Mixed size.
@@ -610,7 +611,7 @@ class PpAutoSize(Enum):
 @unique
 class PpBaselineAlignment(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppBaselineAlignBaseline = 1  # Aligned to the baseline.
@@ -623,7 +624,7 @@ class PpBaselineAlignment(Enum):
 @unique
 class PpBorderType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppBorderTop = 1  # Top    
@@ -637,7 +638,7 @@ class PpBorderType(Enum):
 @unique    
 class PpBulletType(Enum):
 	"""    
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Specifies the type of bullet.
 	
@@ -654,7 +655,7 @@ class PpBulletType(Enum):
 @unique
 class PpChangeCase(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Specifies the way the case of the specified text will be changed.
 	
@@ -671,7 +672,7 @@ class PpChangeCase(Enum):
 @unique
 class PpChartUnitEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAnimateByCategory = 2  # By category
@@ -685,7 +686,7 @@ class PpChartUnitEffect(Enum):
 @unique
 class PpCheckInVersionType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppCheckInMinorVersion = 0  # Minor version
@@ -696,7 +697,7 @@ class PpCheckInVersionType(Enum):
 @unique
 class PpColorSchemeIndex(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Specifies the color in the applied color scheme that is associated with the specified object.
 	
@@ -718,7 +719,7 @@ class PpColorSchemeIndex(Enum):
 @unique
 class PpDateTimeFormat(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppDateTimeddddMMMMddyyyy = 2  # ddddMMMMddyyyy
@@ -741,7 +742,7 @@ class PpDateTimeFormat(Enum):
 @unique
 class PpDirection(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppDirectionLeftToRight = 1  # Left-to-right layout
@@ -752,7 +753,7 @@ class PpDirection(Enum):
 @unique
 class PpEntryEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppEffectNone = 0  # None
@@ -857,7 +858,7 @@ class PpEntryEffect(Enum):
 @unique
 class PpFarEastLineBreakLevel(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppFarEastLineBreakLevelNormal = 1  # Normal level
@@ -868,7 +869,7 @@ class PpFarEastLineBreakLevel(Enum):
 @unique
 class PpFixedFormatIntent(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	pFixedFormatIntentPrint = 2  # Intent is to print exported file.
@@ -878,7 +879,7 @@ class PpFixedFormatIntent(Enum):
 @unique
 class PpFixedFormatType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppFixedFormatTypePDF = 2  # PDF format
@@ -888,7 +889,7 @@ class PpFixedFormatType(Enum):
 @unique
 class PpFollowColors(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppFollowColorsMixed = -2  # The chart colors follow a mixed format of the slide's color scheme.
@@ -901,7 +902,7 @@ class PpFollowColors(Enum):
 @unique
 class PpGuideOrientation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppHorizontalGuide = 1  # Represents a horizontal guide, spanning from the left to right of the slide editing window.
@@ -911,7 +912,7 @@ class PpGuideOrientation(Enum):
 @unique
 class PpHTMLVersion(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppHTMLv3 = 1  # HTML Version 3
@@ -923,7 +924,7 @@ class PpHTMLVersion(Enum):
 @unique
 class PpMediaTaskStatus(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppMediaTaskStatusNone = 0  # No status
@@ -936,7 +937,7 @@ class PpMediaTaskStatus(Enum):
 @unique
 class PpMediaType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppMediaTypeMixed = -2  # Mixed
@@ -948,7 +949,7 @@ class PpMediaType(Enum):
 @unique
 class PpMouseActivation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppMouseClick = 1  # Mouse click
@@ -958,7 +959,7 @@ class PpMouseActivation(Enum):
 @unique
 class PpNumberedBulletStyle(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppBulletAlphaLCParenBoth = 8  # Lowercase alphabetical characters with both parentheses.
@@ -1008,7 +1009,7 @@ class PpNumberedBulletStyle(Enum):
 @unique
 class PpParagraphAlignment(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Specifies the alignment for each paragraph in the specified paragraph format.
 	
@@ -1028,7 +1029,7 @@ class PpParagraphAlignment(Enum):
 @unique
 class PpPasteDataType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPasteBitmap = 1  # Paste bitmap.
@@ -1048,7 +1049,7 @@ class PpPasteDataType(Enum):
 @unique
 class PpPlaceholderType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPlaceholderBitmap = 9  # Bitmap
@@ -1075,7 +1076,7 @@ class PpPlaceholderType(Enum):
 @unique
 class PpPlayerState(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPlaying = 0  # Playing
@@ -1087,7 +1088,7 @@ class PpPlayerState(Enum):
 @unique
 class PpPrintColorType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPrintBlackAndWhite = 2  # Black and White
@@ -1098,7 +1099,7 @@ class PpPrintColorType(Enum):
 @unique
 class PpPrintHandoutOrder(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPrintHandoutHorizontalFirst = 2  # Slides are ordered horizontally, with the first slide in the upper-left corner and the second slide to the right of it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide to the left of it.
@@ -1108,7 +1109,7 @@ class PpPrintHandoutOrder(Enum):
 @unique
 class PpPrintOutputType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPrintOutputBuildSlides = 7  # Build Slides
@@ -1126,7 +1127,7 @@ class PpPrintOutputType(Enum):
 @unique
 class PpPrintRangeType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPrintAll = 1  # Print all slides in the presentation.
@@ -1139,7 +1140,7 @@ class PpPrintRangeType(Enum):
 @unique
 class PpProtectedViewCloseReason(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppProtectedViewCloseNormal = 0  # Protected view is being closed normally.
@@ -1150,7 +1151,7 @@ class PpProtectedViewCloseReason(Enum):
 @unique
 class PpPublishSourceType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppPublishAll = 1  # Publish all.
@@ -1161,7 +1162,7 @@ class PpPublishSourceType(Enum):
 @unique
 class PpRemoveDocInfoType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppRDIAll = 99  # Remove all document information.
@@ -1181,7 +1182,7 @@ class PpRemoveDocInfoType(Enum):
 @unique
 class PpResampleMediaProfile(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppResampleMediaProfileCustom = 1  # Custom profile
@@ -1193,7 +1194,7 @@ class PpResampleMediaProfile(Enum):
 @unique
 class PpRevisionInfo(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppRevisionInfoNone = 0  # No information.
@@ -1204,7 +1205,7 @@ class PpRevisionInfo(Enum):
 @unique
 class PpSaveAsFileType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSaveAsAddIn = 8  # 
@@ -1242,7 +1243,7 @@ class PpSaveAsFileType(Enum):
 @unique
 class PpSelectionType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Constants that specify the type of selection, returned by the Type property of the Selection object.
 	
@@ -1258,7 +1259,7 @@ class PpSelectionType(Enum):
 @unique
 class PpSlideLayout(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	
 	Constants that specify the layout of the slide, passed to and returned by the Layout property of the Slide and SlideRange objects.
 	
@@ -1307,7 +1308,7 @@ class PpSlideLayout(Enum):
 @unique
 class PpSlideShowAdvanceMode(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSlideShowManualAdvance = 1  # Manual Advance
@@ -1318,7 +1319,7 @@ class PpSlideShowAdvanceMode(Enum):
 @unique
 class PpSlideShowPointerType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSlideShowPointerAlwaysHidden = 3  # Pointer is always hidden.
@@ -1332,7 +1333,7 @@ class PpSlideShowPointerType(Enum):
 @unique
 class PpSlideShowRangeType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppShowAll = 1  # Show all.
@@ -1343,7 +1344,7 @@ class PpSlideShowRangeType(Enum):
 @unique
 class PpSlideShowState(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSlideShowBlackScreen = 3  # Black screen
@@ -1356,7 +1357,7 @@ class PpSlideShowState(Enum):
 @unique
 class PpSlideShowType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppShowTypeKiosk = 3  # Kiosk
@@ -1367,7 +1368,7 @@ class PpSlideShowType(Enum):
 @unique
 class PpSlideSizeType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSlideSize35MM = 4  # 35MM
@@ -1389,7 +1390,7 @@ class PpSlideSizeType(Enum):
 @unique
 class PpSoundEffectType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSoundEffectsMixed = -2  # Mixed
@@ -1401,7 +1402,7 @@ class PpSoundEffectType(Enum):
 @unique
 class PpSoundFormatType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppSoundFormatCDAudio = 3  # CD Audio format
@@ -1414,7 +1415,7 @@ class PpSoundFormatType(Enum):
 @unique
 class PpTabStopType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppTabStopCenter = 2  # Center tab stop
@@ -1427,7 +1428,7 @@ class PpTabStopType(Enum):
 @unique
 class PpTextLevelEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAnimateByAllLevels = 16  # By all levels
@@ -1443,7 +1444,7 @@ class PpTextLevelEffect(Enum):
 @unique
 class PpTextStyleType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppDefaultStyle = 1  # Default style
@@ -1454,7 +1455,7 @@ class PpTextStyleType(Enum):
 @unique
 class PpTextUnitEffect(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppAnimateByCharacter = 2  # Text-unit effects are animated by character.
@@ -1466,7 +1467,7 @@ class PpTextUnitEffect(Enum):
 @unique
 class PpTransitionSpeed(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppTransitionSpeedFast = 3  # Fast
@@ -1478,7 +1479,7 @@ class PpTransitionSpeed(Enum):
 @unique
 class PpUpdateOption(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppUpdateOptionAutomatic = 2  # Link will be updated each time the presentation is opened or the source file changes.
@@ -1489,7 +1490,7 @@ class PpUpdateOption(Enum):
 @unique
 class PpViewType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppViewHandoutMaster = 4  # Handout Master
@@ -1509,7 +1510,7 @@ class PpViewType(Enum):
 @unique
 class PpWindowState(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	ppWindowMaximized = 3  # Maximized
@@ -1520,7 +1521,7 @@ class PpWindowState(Enum):
 @unique
 class XlAxisCrosses(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAxisCrossesAutomatic = -4105  # Word sets the axis crossing point.
@@ -1532,7 +1533,7 @@ class XlAxisCrosses(Enum):
 @unique
 class XlAxisGroup(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlPrimary = 1  # The primary axis group.
@@ -1542,7 +1543,7 @@ class XlAxisGroup(Enum):
 @unique
 class XlAxisType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlCategory = 1  # Axis displays categories.
@@ -1553,7 +1554,7 @@ class XlAxisType(Enum):
 @unique
 class XlBackground(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlBackgroundAutomatic = -4105  # Word controls the background.
@@ -1564,7 +1565,7 @@ class XlBackground(Enum):
 @unique
 class XlBarShape(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlBox = 0  # A box.
@@ -1578,7 +1579,7 @@ class XlBarShape(Enum):
 @unique
 class XlBinsType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlBinsTypeAutomatic = 0  # Sets bins type automatically.
@@ -1591,7 +1592,7 @@ class XlBinsType(Enum):
 @unique
 class XlBorderWeight(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlHairline = 1  # A hairline border (thinnest border).
@@ -1603,7 +1604,7 @@ class XlBorderWeight(Enum):
 @unique
 class XlCategoryLabelLevel(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlCategoryLabelLevelAll = -1  # Use all category label levels within range on the chart. The default.
@@ -1613,7 +1614,7 @@ class XlCategoryLabelLevel(Enum):
 @unique
 class XlCategoryType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAutomaticScale = -4105  # Word controls the axis type.
@@ -1624,7 +1625,7 @@ class XlCategoryType(Enum):
 @unique
 class XlChartElementPosition(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlChartElementPositionAutomatic = -4105  # Automatically sets the position of the chart element.
@@ -1634,7 +1635,7 @@ class XlChartElementPosition(Enum):
 @unique
 class XlChartGallery(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAnyGallery = 23  # Either of the galleries.
@@ -1645,7 +1646,7 @@ class XlChartGallery(Enum):
 @unique
 class XlChartItem(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAxis = 21  # Axis.
@@ -1685,7 +1686,7 @@ class XlChartItem(Enum):
 @unique
 class XlChartPicturePlacement(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAllFaces = 7  # Display on all faces.
@@ -1700,7 +1701,7 @@ class XlChartPicturePlacement(Enum):
 @unique
 class XlChartPictureType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlStack = 2  # The picture is sized to repeat a maximum of 15 times in the longest stacked bar.
@@ -1711,7 +1712,7 @@ class XlChartPictureType(Enum):
 @unique
 class XlChartSplitType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlSplitByCustomSplit = 4  # The second chart displays arbitrary slides.
@@ -1723,7 +1724,7 @@ class XlChartSplitType(Enum):
 @unique
 class XlColorIndex(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlColorIndexAutomatic = -4105  # Automatic color.
@@ -1803,7 +1804,7 @@ class XlConstants(Enum):
 @unique
 class XlCopyPictureFormat(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlBitmap = 2  # A bitmap (.bmp, .jpg, .gif).
@@ -1813,7 +1814,7 @@ class XlCopyPictureFormat(Enum):
 @unique
 class XlDataLabelPosition(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlLabelPositionAbove = 0  # The data label is positioned above the data point.
@@ -1832,7 +1833,7 @@ class XlDataLabelPosition(Enum):
 @unique
 class XlDataLabelSeparator(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlDataLabelSeparatorDefault = 1  # Word selects the separator.
@@ -1841,7 +1842,7 @@ class XlDataLabelSeparator(Enum):
 @unique
 class XlDataLabelsType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlDataLabelsShowBubbleSizes = 6  # Show the size of the bubble in reference to the absolute value.
@@ -1855,7 +1856,7 @@ class XlDataLabelsType(Enum):
 @unique
 class XlDisplayBlanksAs(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlInterpolated = 3  # Values are interpolated into the chart.
@@ -1866,7 +1867,7 @@ class XlDisplayBlanksAs(Enum):
 @unique
 class XlDisplayUnit(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlHundredMillions = -8  # Hundreds of millions.
@@ -1883,7 +1884,7 @@ class XlDisplayUnit(Enum):
 @unique
 class XlEndStyleCap(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlCap = 1  # Caps are applied.
@@ -1893,7 +1894,7 @@ class XlEndStyleCap(Enum):
 @unique
 class XlErrorBarDirection(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlChartX = -4168  # Bars run parallel to the y-axis for x-axis values.
@@ -1903,7 +1904,7 @@ class XlErrorBarDirection(Enum):
 @unique
 class XlErrorBarInclude(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlErrorBarIncludeBoth = 1  # Both the positive and negative error range.
@@ -1915,7 +1916,7 @@ class XlErrorBarInclude(Enum):
 @unique
 class XlErrorBarType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlErrorBarTypeCustom = -4114  # The range is set by fixed values or cell values.
@@ -1928,7 +1929,7 @@ class XlErrorBarType(Enum):
 @unique
 class XlHAlign(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlHAlignCenter = -4108  # Center.
@@ -1944,7 +1945,7 @@ class XlHAlign(Enum):
 @unique
 class XlLegendPosition(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlLegendPositionBottom = -4107  # Below the chart.
@@ -1958,7 +1959,7 @@ class XlLegendPosition(Enum):
 @unique
 class XlLineStyle(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlContinuous = 1  # A continuous line.
@@ -1974,7 +1975,7 @@ class XlLineStyle(Enum):
 @unique
 class XlMarkerStyle(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlMarkerStyleAutomatic = -4105  # Automatic markers.
@@ -1994,7 +1995,7 @@ class XlMarkerStyle(Enum):
 @unique
 class XlOrientation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlDownward = -4170  # Text runs downward.
@@ -2006,7 +2007,7 @@ class XlOrientation(Enum):
 @unique
 class XlParentDataLabelOptions(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlParentDataLabelOptionsNone = 0  # No parent labels are shown.
@@ -2017,7 +2018,7 @@ class XlParentDataLabelOptions(Enum):
 @unique
 class XlPattern(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlPatternAutomatic = -4105  # Word controls the pattern.
@@ -2047,7 +2048,7 @@ class XlPattern(Enum):
 @unique
 class XlPictureAppearance(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlPrinter = 2  # The picture is copied as it will look when it is printed.
@@ -2057,7 +2058,7 @@ class XlPictureAppearance(Enum):
 @unique
 class XlPieSliceIndex(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlCenterPoint = 5  # The center point of a pie slice.
@@ -2074,7 +2075,7 @@ class XlPieSliceIndex(Enum):
 @unique
 class XlPieSliceLocation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlCenterPoint = 5  # The center point of a pie slice.
@@ -2091,7 +2092,7 @@ class XlPieSliceLocation(Enum):
 @unique
 class XlPivotFieldOrientation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlColumnField = 2  # A column field.
@@ -2104,7 +2105,7 @@ class XlPivotFieldOrientation(Enum):
 @unique
 class XlReadingOrder(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlContext = -5002  # According to context.
@@ -2115,7 +2116,7 @@ class XlReadingOrder(Enum):
 @unique
 class XlRgbColor(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlAliceBlue = 16775408  # Alice Blue
@@ -2258,7 +2259,7 @@ class XlRgbColor(Enum):
 @unique
 class XlRowCol(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlColumns = 2  # The data series is in a row.
@@ -2268,7 +2269,7 @@ class XlRowCol(Enum):
 @unique
 class XlScaleType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlScaleLinear = -4132  # A linear scale.
@@ -2278,7 +2279,7 @@ class XlScaleType(Enum):
 @unique
 class XlSeriesNameLevel(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlSeriesNameLevelAll = -1  # Sets series names to all series name levels within range on the chart. The default.
@@ -2289,7 +2290,7 @@ class XlSeriesNameLevel(Enum):
 @unique
 class XlSizeRepresents(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlSizeIsArea = 1  # The area of the bubble.
@@ -2299,7 +2300,7 @@ class XlSizeRepresents(Enum):
 @unique
 class XlTickLabelOrientation(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlTickLabelOrientationAutomatic = -4105  # The text orientation is set by Microsoft Word.
@@ -2312,7 +2313,7 @@ class XlTickLabelOrientation(Enum):
 @unique
 class XlTickLabelPosition(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlTickLabelPositionHigh = -4127  # The top or right side of the chart.
@@ -2324,7 +2325,7 @@ class XlTickLabelPosition(Enum):
 @unique
 class XlTickMark(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlTickMarkCross = 4  # Crosses the axis.
@@ -2336,7 +2337,7 @@ class XlTickMark(Enum):
 @unique
 class XlTimeUnit(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlDays = 0  # Days
@@ -2347,7 +2348,7 @@ class XlTimeUnit(Enum):
 @unique
 class XlTrendlineType(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlExponential = 5  # Uses an equation to calculate the least squares fit through points (for example, y=ab^x) .
@@ -2361,7 +2362,7 @@ class XlTrendlineType(Enum):
 @unique
 class XlVAlign(Enum):
 	"""
-	@Enum: inherets methods from the Enum class
+	@Enum: inherits methods from the Enum class
 	"""
 	
 	xlVAlignBottom = -4107  # Bottom alignment.
