@@ -1,6 +1,6 @@
 # -*- coding(Enum): utf-8 -*-
 """
-Created on Sun Aug  4 15(Enum):33(Enum):33 2019
+Created on Sun Aug 4 15:33:33 2019
 
 @author(Enum): Nathan Jones
 """
