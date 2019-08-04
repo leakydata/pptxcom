@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+# -*- coding(Enum): utf-8 -*-
 """
-Created on Sun Aug  4 15:33:33 2019
+Created on Sun Aug  4 15(Enum):33(Enum):33 2019
 
-@author: Nathan Jones
+@author(Enum): Nathan Jones
 """
 
 from enum import Enum, unique
@@ -14,12 +14,12 @@ class MsoAnimAccumulate(Enum):
 
 
 
-class MsoAnimAdditive:
+class MsoAnimAdditive(Enum):
 	msoAnimAdditiveAddBase = 1  # Uses the animation behavior of the base animations.
 	msoAnimAdditiveAddSum = 2  # Adds together the animation behavior of multiple animations.
 
 
-class MsoAnimAfterEffect:
+class MsoAnimAfterEffect(Enum):
 	msoAnimAfterEffectDim = 1  # Dimmed
 	msoAnimAfterEffectHide = 2  # Hidden
 	msoAnimAfterEffectHideOnNextClick = 3  # Hidden on the next mouse click
@@ -27,7 +27,7 @@ class MsoAnimAfterEffect:
 	msoAnimAfterEffectNone = 0  # Unchanged
 
 
-class MsoAnimateByLevel:
+class MsoAnimateByLevel(Enum):
 	msoAnimateChartAllAtOnce = 7  # Animate chart all at once
 	msoAnimateChartByCategory = 8  # Animate chart by category
 	msoAnimateChartByCategoryElements = 9  # Animate chart by category elements
@@ -58,13 +58,13 @@ class MsoAnimateByLevel:
 	msoAnimateTextByThirdLevel = 4  # Animate text by third level
 
 
-class MsoAnimCommandType:
+class MsoAnimCommandType(Enum):
 	msoAnimCommandTypeCall = 1  # Call
 	msoAnimCommandTypeEvent = 0  # Event
 	msoAnimCommandTypeVerb = 2  # Verb
 
 
-class MsoAnimDirection:
+class MsoAnimDirection(Enum):
 	msoAnimDirectionAcross = 18  # Across
 	msoAnimDirectionBottom = 11  # Bottom
 	msoAnimDirectionBottomLeft = 15  # Bottom Left
@@ -112,7 +112,7 @@ class MsoAnimDirection:
 	msoAnimDirectionVerticalOut = 26  # Moves Vertically Out
 
 
-class MsoAnimEffect:
+class MsoAnimEffect(Enum):
 	msoAnimEffectAppear = 1  # Appears
 	msoAnimEffectArcUp = 47  # Arcs Up
 	msoAnimEffectAscend = 39  # Ascends
@@ -265,20 +265,20 @@ class MsoAnimEffect:
 	msoAnimEffectZoom = 23  # Zoom effect
 
 
-class MsoAnimEffectAfter:
+class MsoAnimEffectAfter(Enum):
 	msoAnimEffectAfterFreeze = 1  # After freeze.
 	msoAnimEffectAfterHold = 3  # After hold.
 	msoAnimEffectAfterRemove = 2  # After remove.
 	msoAnimEffectAfterTransition = 4  # After transition.
 
 
-class MsoAnimEffectRestart:
+class MsoAnimEffectRestart(Enum):
 	msoAnimEffectRestartAlways = 1  # Always restarts.
 	msoAnimEffectRestartNever = 3  # Never restarts.
 	msoAnimEffectRestartWhenOff = 2  # Restarts when animation is off.
 
 
-class MsoAnimFilterEffectSubtype:
+class MsoAnimFilterEffectSubtype(Enum):
 	msoAnimFilterEffectSubtypeAcross = 9  # Across
 	msoAnimFilterEffectSubtypeDown = 25  # Down
 	msoAnimFilterEffectSubtypeDownLeft = 14  # Left
@@ -308,7 +308,7 @@ class MsoAnimFilterEffectSubtype:
 	msoAnimFilterEffectSubtypeVertical = 6  # Vertical
 
 
-class MsoAnimFilterEffectType:
+class MsoAnimFilterEffectType(Enum):
 	msoAnimFilterEffectTypeBarn = 1  # Barn
 	msoAnimFilterEffectTypeBlinds = 2  # Blinds
 	msoAnimFilterEffectTypeBox = 3  # Box
@@ -330,7 +330,7 @@ class MsoAnimFilterEffectType:
 	msoAnimFilterEffectTypeWipe = 18  # Wipe
 
 
-class MsoAnimProperty:
+class MsoAnimProperty(Enum):
 	msoAnimColor = 7  # Color
 	msoAnimHeight = 4  # Height
 	msoAnimNone = 0  # None
@@ -376,14 +376,14 @@ class MsoAnimProperty:
 	msoAnimY = 2  # Y coordinate
 
 
-class MsoAnimTextUnitEffect:
+class MsoAnimTextUnitEffect(Enum):
 	msoAnimTextUnitEffectByCharacter = 1  # By character.
 	msoAnimTextUnitEffectByParagraph = 0  # By paragraph.
 	msoAnimTextUnitEffectByWord = 2  # By word.
 	msoAnimTextUnitEffectMixed = -1  # Mixed effect.
 
 
-class MsoAnimTriggerType:
+class MsoAnimTriggerType(Enum):
 	msoAnimTriggerAfterPrevious = 3  # After the Previous button is clicked.
 	msoAnimTriggerMixed = -1  # Mixed actions.
 	msoAnimTriggerNone = 0  # No action associated as the trigger.
@@ -392,7 +392,7 @@ class MsoAnimTriggerType:
 	msoAnimTriggerWithPrevious = 2  # When the Previous button is clicked.
 
 
-class MsoAnimType:
+class MsoAnimType(Enum):
 	msoAnimTypeColor = 2  # Color
 	msoAnimTypeCommand = 6  # Command
 	msoAnimTypeFilter = 7  # Filter
@@ -405,56 +405,56 @@ class MsoAnimType:
 	msoAnimTypeSet = 8  # Set
 
 
-class MsoClickState:
+class MsoClickState(Enum):
 	msoClickStateAfterAllAnimations = -2  # After all animations.
 	msoClickStateBeforeAutomaticAnimations = -1  # Before automatic animations.
 
 
 @unique
 class MsoShapeType(Enum):
-    """    
-    @Enum: inherets methods from the Enum class
-    
-    This class represents the various shape types available in PowerPoint.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/office.msoshapetype
-    """
-    
-    msoShapeTypeMixed = -2  # ShapeTypeMixed (-2)
-    msoAutoShape = 1  # AutoShape (1)
-    msoCallout = 2  # Callout (2)
-    msoChart = 3  # Chart (3)
-    msoComment = 4  # Comment (4)
-    msoFreeform = 5  # Freeform (5)
-    msoGroup = 6  # Group (6)
-    msoEmbeddedOLEObject = 7  # EmbeddedOLEObject (7)
-    msoFormControl = 8  # FormControl (8)
-    msoLine = 9  # Line (9)
-    msoLinkedOLEObject = 10  # LinkedOLEObject (10)
-    msoLinkedPicture = 11  # LinkedPicture (11)
-    msoOLEControlObject = 12  # OLEControlObject (12)
-    msoPicture = 13  # Picture (13)
-    msoPlaceholder = 14  # Placeholder (14)
-    msoTextEffect = 15  # TextEffect (15)
-    msoMedia = 16  # Media (16)
-    msoTextBox = 17  # TextBox (17)
-    msoScriptAnchor = 18  # ScriptAnchor (18)
-    msoTable = 19  # Table (19)
-    msoCanvas = 20  # Canvas (20)
-    msoDiagram = 21  # Diagram (21)
-    msoInk = 22  # Ink (22)
-    msoInkComment = 23  # InkComment (23)
-    msoIgxGraphic = 24  # SmartArt graphic
-    # There is no 25
-    msoWebVideo = 26  # Web video
-    msoContentApp = 27  # Content Office Add-in
-    msoGraphic = 28  # Graphic
-    msoLinkedGraphic = 29  # Linked graphic
-    mso3DModel = 30  # 3D model
-    msoLinked3DModel = 31  # Linked 3D model
+	"""    
+	@Enum(Enum): inherets methods from the Enum class
+	
+	This class represents the various shape types available in PowerPoint.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/office.msoshapetype
+	"""
+	
+	msoShapeTypeMixed = -2  # ShapeTypeMixed (-2)
+	msoAutoShape = 1  # AutoShape (1)
+	msoCallout = 2  # Callout (2)
+	msoChart = 3  # Chart (3)
+	msoComment = 4  # Comment (4)
+	msoFreeform = 5  # Freeform (5)
+	msoGroup = 6  # Group (6)
+	msoEmbeddedOLEObject = 7  # EmbeddedOLEObject (7)
+	msoFormControl = 8  # FormControl (8)
+	msoLine = 9  # Line (9)
+	msoLinkedOLEObject = 10  # LinkedOLEObject (10)
+	msoLinkedPicture = 11  # LinkedPicture (11)
+	msoOLEControlObject = 12  # OLEControlObject (12)
+	msoPicture = 13  # Picture (13)
+	msoPlaceholder = 14  # Placeholder (14)
+	msoTextEffect = 15  # TextEffect (15)
+	msoMedia = 16  # Media (16)
+	msoTextBox = 17  # TextBox (17)
+	msoScriptAnchor = 18  # ScriptAnchor (18)
+	msoTable = 19  # Table (19)
+	msoCanvas = 20  # Canvas (20)
+	msoDiagram = 21  # Diagram (21)
+	msoInk = 22  # Ink (22)
+	msoInkComment = 23  # InkComment (23)
+	msoIgxGraphic = 24  # SmartArt graphic
+	# There is no 25
+	msoWebVideo = 26  # Web video
+	msoContentApp = 27  # Content Office Add-in
+	msoGraphic = 28  # Graphic
+	msoLinkedGraphic = 29  # Linked graphic
+	mso3DModel = 30  # 3D model
+	msoLinked3DModel = 31  # Linked 3D model
 
 
-class PpActionType:
+class PpActionType(Enum):
 	ppActionEndShow = 6  # Slide show ends.
 	ppActionFirstSlide = 3  # Returns to the first slide.
 	ppActionHyperlink = 7  # Hyperlink.
@@ -471,13 +471,13 @@ class PpActionType:
 	ppActionRunProgram = 9  # Runs a program.
 
 
-class PpAdvanceMode:
+class PpAdvanceMode(Enum):
 	ppAdvanceModeMixed = -2  # Mixed mode.
 	ppAdvanceOnClick = 1  # Only when clicked.
 	ppAdvanceOnTime = 2  # Automatically after a specified amount of time.
 
 
-class PpAfterEffect:
+class PpAfterEffect(Enum):
 	ppAfterEffectDim = 2  # Appears dimmed
 	ppAfterEffectHide = 1  # Hides
 	ppAfterEffectHideOnClick = 3  # Hidden when clicked
@@ -485,23 +485,23 @@ class PpAfterEffect:
 	ppAfterEffectNothing = 0  # No effect
 
 
-class PpAlertLevel:
+class PpAlertLevel(Enum):
 	ppAlertsAll = 2  # All alerts displayed.
 	ppAlertsNone = 1  # No alerts displayed.
 
 
-class PpArrangeStyle:
+class PpArrangeStyle(Enum):
 	ppArrangeCascade = 2  # Cascade
 	ppArrangeTiled = 1  # Tiled
 
 
-class PpAutoSize:
+class PpAutoSize(Enum):
 	ppAutoSizeMixed = -2  # Mixed size.
 	ppAutoSizeNone = 0  # Does not change size.
 	ppAutoSizeShapeToFitText = 1  # Auto sizes the shape to fit the text.
 
 
-class PpBaselineAlignment:
+class PpBaselineAlignment(Enum):
 	ppBaselineAlignBaseline = 1  # Aligned to the baseline.
 	ppBaselineAlignCenter = 3  # Aligned to the center.
 	ppBaselineAlignFarEast50 = 4  # Align FarEast50.
@@ -509,7 +509,7 @@ class PpBaselineAlignment:
 	ppBaselineAlignTop = 2  # Aligned to the top.
 
 
-class PpBorderType:
+class PpBorderType(Enum):
 	ppBorderBottom = 3  # Bottom
 	ppBorderDiagonalDown = 5  # Diagonally down
 	ppBorderDiagonalUp = 6  # Diagonally up
@@ -526,39 +526,39 @@ class PpBorderType:
 
 @unique    
 class PpBulletType(Enum):
-    """    
-    @Enum: inherets methods from the Enum class
-    
-    Specifies the type of bullet.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppbullettype
-    """
-    
-    ppBulletMixed = -2  # Mixed bullets
-    ppBulletNone = 0  # No bullets
-    ppBulletUnnumbered = 1  # Unnumbered bullets
-    ppBulletNumbered = 2  # Numbered bullets
-    ppBulletPicture = 3  # Bullets with an image
+	"""    
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Specifies the type of bullet.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppbullettype
+	"""
+	
+	ppBulletMixed = -2  # Mixed bullets
+	ppBulletNone = 0  # No bullets
+	ppBulletUnnumbered = 1  # Unnumbered bullets
+	ppBulletNumbered = 2  # Numbered bullets
+	ppBulletPicture = 3  # Bullets with an image
 
 
 @unique
 class PpChangeCase(Enum):
-    """
-    @Enum: inherets methods from the Enum class
-    
-    Specifies the way the case of the specified text will be changed.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppchangecase
-    """
-    
-    ppCaseSentence = 1  # Change to lowercase.
-    ppCaseLower = 2  # Change to lowercase.
-    ppCaseUpper = 3  # Change to uppercase.
-    ppCaseTitle = 4  # Change to title case.
-    ppCaseToggle = 5  # Toggle upper and lower casing.
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Specifies the way the case of the specified text will be changed.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppchangecase
+	"""
+	
+	ppCaseSentence = 1  # Change to lowercase.
+	ppCaseLower = 2  # Change to lowercase.
+	ppCaseUpper = 3  # Change to uppercase.
+	ppCaseTitle = 4  # Change to title case.
+	ppCaseToggle = 5  # Toggle upper and lower casing.
 
 
-class PpChartUnitEffect:
+class PpChartUnitEffect(Enum):
 	ppAnimateByCategory = 2  # By category
 	ppAnimateByCategoryElements = 4  # By category elements
 	ppAnimateBySeries = 1  # By series
@@ -567,7 +567,7 @@ class PpChartUnitEffect:
 	ppAnimateChartMixed = -2  # Chart mixed
 
 
-class PpCheckInVersionType:
+class PpCheckInVersionType(Enum):
 	ppCheckInMajorVersion = 1  # Major version
 	ppCheckInMinorVersion = 0  # Minor version
 	ppCheckInOverwriteVersion = 2  # Overwrite current version
@@ -575,27 +575,27 @@ class PpCheckInVersionType:
 
 @unique
 class PpColorSchemeIndex(Enum):
-    """
-    @Enum: inherets methods from the Enum class
-    
-    Specifies the color in the applied color scheme that is associated with the specified object.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppcolorschemeindex
-    """
-    
-    ppSchemeColorMixed = -2  # Mixed scheme color
-    ppNotSchemeColor = 0  # Not scheme color
-    ppBackground = 1  # Background
-    ppForeground = 2  # Foreground
-    ppShadow = 3  # Shadow
-    ppTitle = 4  # Title
-    ppFill = 5  # Fill
-    ppAccent1 = 6  # Accent1
-    ppAccent2 = 7  # Accent2
-    ppAccent3 = 8  # Accent3
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Specifies the color in the applied color scheme that is associated with the specified object.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppcolorschemeindex
+	"""
+	
+	ppSchemeColorMixed = -2  # Mixed scheme color
+	ppNotSchemeColor = 0  # Not scheme color
+	ppBackground = 1  # Background
+	ppForeground = 2  # Foreground
+	ppShadow = 3  # Shadow
+	ppTitle = 4  # Title
+	ppFill = 5  # Fill
+	ppAccent1 = 6  # Accent1
+	ppAccent2 = 7  # Accent2
+	ppAccent3 = 8  # Accent3
 
 
-class PpDateTimeFormat:
+class PpDateTimeFormat(Enum):
 	ppDateTimeddddMMMMddyyyy = 2  # ddddMMMMddyyyy
 	ppDateTimedMMMMyyyy = 3  # dMMMMyyyy
 	ppDateTimedMMMyy = 5  # dMMMyy
@@ -613,13 +613,13 @@ class PpDateTimeFormat:
 	ppDateTimeMMyy = 7  # MMyy
 
 
-class PpDirection:
+class PpDirection(Enum):
 	ppDirectionLeftToRight = 1  # Left-to-right layout
 	ppDirectionMixed = -2  # Mixed layout
 	ppDirectionRightToLeft = 2  # Right-to-left layout
 
 
-class PpEntryEffect:
+class PpEntryEffect(Enum):
 	ppEffectAppear = 3844  # Appear
 	ppEffectBlindsHorizontal = 769  # Blinds Horizontal
 	ppEffectBlindsVertical = 770  # Blinds Vertical
@@ -719,23 +719,23 @@ class PpEntryEffect:
 	ppEffectZoomOutSlightly = 3348  # Zoom Out Slightly
 
 
-class PpFarEastLineBreakLevel:
+class PpFarEastLineBreakLevel(Enum):
 	ppFarEastLineBreakLevelCustom = 3  # Custom level
 	ppFarEastLineBreakLevelNormal = 1  # Normal level
 	ppFarEastLineBreakLevelStrict = 2  # Strict level
 
 
-class PpFixedFormatIntent:
+class PpFixedFormatIntent(Enum):
 	pFixedFormatIntentPrint = 2  # Intent is to print exported file.
 	ppFixedFormatIntentScreen = 1  # Intent is to view exported file on screen.
 
 
-class PpFixedFormatType:
+class PpFixedFormatType(Enum):
 	ppFixedFormatTypePDF = 2  # PDF format
 	ppFixedFormatTypeXPS = 1  # XPS format
 
 
-class PpFollowColors:
+class PpFollowColors(Enum):
 	ppFollowColorsMixed = -2  # The chart colors follow a mixed format of the slide's color scheme.
 	ppFollowColorsNone = 0  # The chart colors do not follow the slide's color scheme.
 	ppFollowColorsScheme = 1  # All the colors in the chart follow the slide's color scheme.
@@ -747,19 +747,19 @@ class PpFollowColors:
 	ppFrameColorsWhiteTextOnBlack = 4  # Use Black text on a White frame.
 
 
-class PpGuideOrientation:
+class PpGuideOrientation(Enum):
 	ppHorizontalGuide = 1  # Represents a horizontal guide, spanning from the left to right of the slide editing window.
 	ppVerticalGuide = 2  # Represents a vertical guide, spanning from top edge to bottom of the slide editing window.
 
 
-class PpHTMLVersion:
+class PpHTMLVersion(Enum):
 	ppHTMLAutodetect = 4  # Autodetect
 	ppHTMLDual = 3  # Dual version
 	ppHTMLv3 = 1  # HTML Version 3
 	ppHTMLv4 = 2  # HTML Version 4 (Default)
 
 
-class PpMediaTaskStatus:
+class PpMediaTaskStatus(Enum):
 	ppMediaTaskStatusNone = 0  # No status
 	ppMediaTaskStatusInProgress = 1  # In progress
 	ppMediaTaskStatusQueued = 2  # Queued
@@ -767,19 +767,19 @@ class PpMediaTaskStatus:
 	ppMediaTaskStatusFailed = 4  # Failed
 
 
-class PpMediaType:
+class PpMediaType(Enum):
 	ppMediaTypeMixed = -2  # Mixed
 	ppMediaTypeMovie = 3  # Movie
 	ppMediaTypeOther = 1  # Others
 	ppMediaTypeSound = 2  # Sound
 
 
-class PpMouseActivation:
+class PpMouseActivation(Enum):
 	ppMouseClick = 1  # Mouse click
 	ppMouseOver = 2  # Mouse over
 
 
-class PpNumberedBulletStyle:
+class PpNumberedBulletStyle(Enum):
 	ppBulletAlphaLCParenBoth = 8  # Lowercase alphabetical characters with both parentheses.
 	ppBulletAlphaLCParenRight = 9  # Lowercase alphabetical characters with closing parenthesis.
 	ppBulletAlphaLCPeriod = 0  # Lowercase alphabetical characters with a period.
@@ -825,25 +825,25 @@ class PpNumberedBulletStyle:
 
 @unique
 class PpParagraphAlignment(Enum):
-    """
-    @Enum: inherets methods from the Enum class
-    
-    Specifies the alignment for each paragraph in the specified paragraph format.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppparagraphalignment    
-    """
-    
-    ppAlignmentMixed = -2  # Mixed alignment
-    ppAlignLeft = 1  # Left aligned
-    ppAlignCenter = 2  # Center align
-    ppAlignRight = 3  # Right-aligned
-    ppAlignJustify = 4  # Justify
-    ppAlignDistribute = 5  # Distribute
-    ppAlignThaiDistribute = 6  # Thai distributed
-    ppAlignJustifyLow = 7  # Low justify
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Specifies the alignment for each paragraph in the specified paragraph format.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppparagraphalignment    
+	"""
+	
+	ppAlignmentMixed = -2  # Mixed alignment
+	ppAlignLeft = 1  # Left aligned
+	ppAlignCenter = 2  # Center align
+	ppAlignRight = 3  # Right-aligned
+	ppAlignJustify = 4  # Justify
+	ppAlignDistribute = 5  # Distribute
+	ppAlignThaiDistribute = 6  # Thai distributed
+	ppAlignJustifyLow = 7  # Low justify
 
 
-class PpPasteDataType:
+class PpPasteDataType(Enum):
 	ppPasteBitmap = 1  # Paste bitmap.
 	ppPasteDefault = 0  # Paste the default content of the clipboard.
 	ppPasteEnhancedMetafile = 2  # Paste enhanced Metafile
@@ -858,7 +858,7 @@ class PpPasteDataType:
 	ppPasteText = 7  # Paste text.
 
 
-class PpPlaceholderType:
+class PpPlaceholderType(Enum):
 	ppPlaceholderBitmap = 9  # Bitmap
 	ppPlaceholderBody = 2  # Body
 	ppPlaceholderCenterTitle = 3  # Center Title
@@ -880,25 +880,25 @@ class PpPlaceholderType:
 	ppPlaceholderVerticalTitle = 5  # Vertical Title
 
 
-class PpPlayerState:
+class PpPlayerState(Enum):
 	ppPlaying = 0  # Playing
 	ppPaused = 1  # Paused
 	ppStopped = 2  # Stopped
 	ppNotReady = 3  # Not ready
 
 
-class PpPrintColorType:
+class PpPrintColorType(Enum):
 	ppPrintBlackAndWhite = 2  # Black and White
 	ppPrintColor = 1  # Colored
 	ppPrintPureBlackAndWhite = 3  # Pure Black and White
 
 
-class PpPrintHandoutOrder:
+class PpPrintHandoutOrder(Enum):
 	ppPrintHandoutHorizontalFirst = 2  # Slides are ordered horizontally, with the first slide in the upper-left corner and the second slide to the right of it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide to the left of it.
 	ppPrintHandoutVerticalFirst = 1  # Slides are ordered vertically, with the first slide in the upper-left corner and the second slide below it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide below it.
 
 
-class PpPrintOutputType:
+class PpPrintOutputType(Enum):
 	ppPrintOutputBuildSlides = 7  # Build Slides
 	ppPrintOutputFourSlideHandouts = 8  # Four Slide Handouts
 	ppPrintOutputNineSlideHandouts = 9  # Nine Slide Handouts
@@ -911,7 +911,7 @@ class PpPrintOutputType:
 	ppPrintOutputTwoSlideHandouts = 2  # Two Slide Handouts
 
 
-class PpPrintRangeType:
+class PpPrintRangeType(Enum):
 	ppPrintAll = 1  # Print all slides in the presentation.
 	ppPrintCurrent = 3  # Print the current slide from the presentation.
 	ppPrintNamedSlideShow = 5  # Print a named slideshow.
@@ -919,19 +919,19 @@ class PpPrintRangeType:
 	ppPrintSlideRange = 4  # Print a range of slides.
 
 
-class PpProtectedViewCloseReason:
+class PpProtectedViewCloseReason(Enum):
 	ppProtectedViewCloseNormal = 0  # Protected view is being closed normally.
 	ppProtectedViewCloseEdit = 1  # Protected view is being closed so that the presentation can be edited.
 	ppProtectedViewCloseForced = 2  # Protected view is forced closed.
 
 
-class PpPublishSourceType:
+class PpPublishSourceType(Enum):
 	ppPublishAll = 1  # Publish all.
 	ppPublishNamedSlideShow = 3  # Publish a named slideshow.
 	ppPublishSlideRange = 2  # Publish a range of slides.
 
 
-class PpRemoveDocInfoType:
+class PpRemoveDocInfoType(Enum):
 	ppRDIAll = 99  # Remove all document information.
 	ppRDIAtMentions = 18  # Remove resolved @mentioned users from comments.
 	ppRDIComments = 1  # Remove comments.
@@ -940,26 +940,26 @@ class PpRemoveDocInfoType:
 	ppRDIDocumentProperties = 8  # Remove document properties.
 	ppRDIDocumentServerProperties = 14  # Remove document server properties.
 	ppRDIDocumentWorkspace = 10  # Remove document workspace information.
-	ppRDIInkAnnotations = 11  # Remove Ink annotations. NOTE: This constant has been deprecated, but it remains part of the object model for backward compatibility. You should not use it in new applications.
+	ppRDIInkAnnotations = 11  # Remove Ink annotations. NOTE(Enum): This constant has been deprecated, but it remains part of the object model for backward compatibility. You should not use it in new applications.
 	ppRDIPublishPath = 13  # Remove publication path information.
 	ppRDIRemovePersonalInformation = 4  # Remove personal information.
 	ppRDISlideUpdateInformation = 17  # Remove slide update information.
 
 
-class PpResampleMediaProfile:
+class PpResampleMediaProfile(Enum):
 	ppResampleMediaProfileCustom = 1  # Custom profile
 	ppResampleMediaProfileSmall = 2  # Small profile
 	ppResampleMediaProfileSmaller = 3  # Smaller profile
 	ppResampleMediaProfileSmallest = 4  # Smallest profile
 
 
-class PpRevisionInfo:
+class PpRevisionInfo(Enum):
 	ppRevisionInfoBaseline = 1  # Information baseline.
 	ppRevisionInfoMerged = 2  # Information merged.
 	ppRevisionInfoNone = 0  # No information.
 
 
-class PpSaveAsFileType:
+class PpSaveAsFileType(Enum):
 	ppSaveAsAddIn = 8  # 
 	ppSaveAsBMP = 19  # 
 	ppSaveAsDefault = 11  # 
@@ -994,76 +994,76 @@ class PpSaveAsFileType:
 
 @unique
 class PpSelectionType(Enum):
-    """
-    @Enum: inherets methods from the Enum class
-    
-    Constants that specify the type of selection, returned by the Type property of the Selection object.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppselectiontype
-    """
-    
-    ppSelectionNone = 0  # None
-    ppSelectionSlides = 1  # Slides
-    ppSelectionShapes = 2  # Shapes
-    ppSelectionText = 3  # Text
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Constants that specify the type of selection, returned by the Type property of the Selection object.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppselectiontype
+	"""
+	
+	ppSelectionNone = 0  # None
+	ppSelectionSlides = 1  # Slides
+	ppSelectionShapes = 2  # Shapes
+	ppSelectionText = 3  # Text
 
 
 @unique
 class PpSlideLayout(Enum):
-    """
-    @Enum: inherets methods from the Enum class
-    
-    Constants that specify the layout of the slide, passed to and returned by the Layout property of the Slide and SlideRange objects.
-    
-    https://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppslidelayout
-    """
-    
-    ppLayoutMixed = -2  # Mixed
-    ppLayoutTitle = 1  # Title
-    ppLayoutText = 2  # Text
-    ppLayoutTwoColumnText = 3  # Two-column text
-    ppLayoutTable = 4  # Table
-    ppLayoutTextAndChart = 5  # Text and chart
-    ppLayoutChartAndText = 6  # Chart and text
-    ppLayoutOrgchart = 7  # Organization chart
-    ppLayoutChart = 8  # Chart
-    ppLayoutTextAndClipArt = 9  # Text and ClipArt
-    ppLayoutClipArtAndText = 10  # ClipArt and text
-    ppLayoutTitleOnly = 11  # Title only
-    ppLayoutBlank = 12  # Blank
-    ppLayoutTextAndObject = 13  # Text and object
-    ppLayoutObjectAndText = 14  # Object and text
-    ppLayoutLargeObject = 15  # Large object
-    ppLayoutObject = 16  # Object
-    ppLayoutTextAndMediaClip = 17  # Text and MediaClip
-    ppLayoutMediaClipAndText = 18  # MediaClip and text
-    ppLayoutObjectOverText = 19  # Object over text
-    ppLayoutTextOverObject = 20  # Text over object
-    ppLayoutTextAndTwoObjects = 21  # Text and two objects
-    ppLayoutTwoObjectsAndText = 22  # Two objects and text
-    ppLayoutTwoObjectsOverText = 23  # Two objects over text
-    ppLayoutFourObjects = 24  # Four objects
-    ppLayoutVerticalText = 25  # Vertical text
-    ppLayoutClipArtAndVerticalText = 26  # ClipArt and vertical text
-    ppLayoutVerticalTitleAndText = 27  # Vertical title and text
-    ppLayoutVerticalTitleAndTextOverChart = 28  # Vertical title and text over chart
-    ppLayoutTwoObjects = 29  # Two objects
-    ppLayoutObjectAndTwoObjects = 30  # Object and two objects
-    ppLayoutTwoObjectsAndObject = 31  # Two objects and object
-    ppLayoutCustom = 32  # Custom
-    ppLayoutSectionHeader = 33  # Section header
-    ppLayoutComparison = 34  # Comparison
-    ppLayoutContentWithCaption = 35  # Content with caption
-    ppLayoutPictureWithCaption = 36  # Picture with caption
+	"""
+	@Enum(Enum): inherets methods from the Enum class
+	
+	Constants that specify the layout of the slide, passed to and returned by the Layout property of the Slide and SlideRange objects.
+	
+	https(Enum)://docs.microsoft.com/en-us/office/vba/api/powerpoint.ppslidelayout
+	"""
+	
+	ppLayoutMixed = -2  # Mixed
+	ppLayoutTitle = 1  # Title
+	ppLayoutText = 2  # Text
+	ppLayoutTwoColumnText = 3  # Two-column text
+	ppLayoutTable = 4  # Table
+	ppLayoutTextAndChart = 5  # Text and chart
+	ppLayoutChartAndText = 6  # Chart and text
+	ppLayoutOrgchart = 7  # Organization chart
+	ppLayoutChart = 8  # Chart
+	ppLayoutTextAndClipArt = 9  # Text and ClipArt
+	ppLayoutClipArtAndText = 10  # ClipArt and text
+	ppLayoutTitleOnly = 11  # Title only
+	ppLayoutBlank = 12  # Blank
+	ppLayoutTextAndObject = 13  # Text and object
+	ppLayoutObjectAndText = 14  # Object and text
+	ppLayoutLargeObject = 15  # Large object
+	ppLayoutObject = 16  # Object
+	ppLayoutTextAndMediaClip = 17  # Text and MediaClip
+	ppLayoutMediaClipAndText = 18  # MediaClip and text
+	ppLayoutObjectOverText = 19  # Object over text
+	ppLayoutTextOverObject = 20  # Text over object
+	ppLayoutTextAndTwoObjects = 21  # Text and two objects
+	ppLayoutTwoObjectsAndText = 22  # Two objects and text
+	ppLayoutTwoObjectsOverText = 23  # Two objects over text
+	ppLayoutFourObjects = 24  # Four objects
+	ppLayoutVerticalText = 25  # Vertical text
+	ppLayoutClipArtAndVerticalText = 26  # ClipArt and vertical text
+	ppLayoutVerticalTitleAndText = 27  # Vertical title and text
+	ppLayoutVerticalTitleAndTextOverChart = 28  # Vertical title and text over chart
+	ppLayoutTwoObjects = 29  # Two objects
+	ppLayoutObjectAndTwoObjects = 30  # Object and two objects
+	ppLayoutTwoObjectsAndObject = 31  # Two objects and object
+	ppLayoutCustom = 32  # Custom
+	ppLayoutSectionHeader = 33  # Section header
+	ppLayoutComparison = 34  # Comparison
+	ppLayoutContentWithCaption = 35  # Content with caption
+	ppLayoutPictureWithCaption = 36  # Picture with caption
 
 
-class PpSlideShowAdvanceMode:
+class PpSlideShowAdvanceMode(Enum):
 	ppSlideShowManualAdvance = 1  # Manual Advance
 	ppSlideShowRehearseNewTimings = 3  # Rehearsed timings
 	ppSlideShowUseSlideTimings = 2  # Specified timings for each slide
 
 
-class PpSlideShowPointerType:
+class PpSlideShowPointerType(Enum):
 	ppSlideShowPointerAlwaysHidden = 3  # Pointer is always hidden.
 	ppSlideShowPointerArrow = 1  # Arrow pointer used.
 	ppSlideShowPointerAutoArrow = 4  # AutoArrow pointer used.
@@ -1072,13 +1072,13 @@ class PpSlideShowPointerType:
 	ppSlideShowPointerPen = 2  # Pen pointer used.
 
 
-class PpSlideShowRangeType:
+class PpSlideShowRangeType(Enum):
 	ppShowAll = 1  # Show all.
 	ppShowNamedSlideShow = 3  # Show named slideshow.
 	ppShowSlideRange = 2  # Show slide range.
 
 
-class PpSlideShowState:
+class PpSlideShowState(Enum):
 	ppSlideShowBlackScreen = 3  # Black screen
 	ppSlideShowDone = 5  # Done
 	ppSlideShowPaused = 2  # Paused
@@ -1086,13 +1086,13 @@ class PpSlideShowState:
 	ppSlideShowWhiteScreen = 4  # White screen
 
 
-class PpSlideShowType:
+class PpSlideShowType(Enum):
 	ppShowTypeKiosk = 3  # Kiosk
 	ppShowTypeSpeaker = 1  # Speaker
 	ppShowTypeWindow = 2  # Window
 
 
-class PpSlideSizeType:
+class PpSlideSizeType(Enum):
 	ppSlideSize35MM = 4  # 35MM
 	ppSlideSizeA3Paper = 9  # A3 Paper
 	ppSlideSizeA4Paper = 3  # A4 Paper
@@ -1109,14 +1109,14 @@ class PpSlideSizeType:
 	ppSlideSizeOverhead = 5  # Overhead
 
 
-class PpSoundEffectType:
+class PpSoundEffectType(Enum):
 	ppSoundEffectsMixed = -2  # Mixed
 	ppSoundFile = 2  # File
 	ppSoundNone = 0  # None
 	ppSoundStopPrevious = 1  # Stop Previous
 
 
-class PpSoundFormatType:
+class PpSoundFormatType(Enum):
 	ppSoundFormatCDAudio = 3  # CD Audio format
 	ppSoundFormatMIDI = 2  # MIDI format
 	ppSoundFormatMixed = -2  # Mixed format
@@ -1124,7 +1124,7 @@ class PpSoundFormatType:
 	ppSoundFormatWAV = 1  # WAV format
 
 
-class PpTabStopType:
+class PpTabStopType(Enum):
 	ppTabStopCenter = 2  # Center tab stop
 	ppTabStopDecimal = 4  # Decimal tab stop
 	ppTabStopLeft = 1  # Left tab stop
@@ -1132,7 +1132,7 @@ class PpTabStopType:
 	ppTabStopRight = 3  # Right tab stop
 
 
-class PpTextLevelEffect:
+class PpTextLevelEffect(Enum):
 	ppAnimateByAllLevels = 16  # By all levels
 	ppAnimateByFifthLevel = 5  # By fifth level
 	ppAnimateByFirstLevel = 1  # By first level
@@ -1143,33 +1143,33 @@ class PpTextLevelEffect:
 	ppAnimateLevelNone = 0  # No level
 
 
-class PpTextStyleType:
+class PpTextStyleType(Enum):
 	ppBodyStyle = 3  # Body style
 	ppDefaultStyle = 1  # Default style
 	ppTitleStyle = 2  # Title style
 
 
-class PpTextUnitEffect:
+class PpTextUnitEffect(Enum):
 	ppAnimateByCharacter = 2  # Text-unit effects are animated by character.
 	ppAnimateByParagraph = 0  # Text-unit effects are animated by paragraph.
 	ppAnimateByWord = 1  # Text-unit effects are animated by word.
 	ppAnimateUnitMixed = -2  # Text-unit effects are animated in a mixed manner.
 
 
-class PpTransitionSpeed:
+class PpTransitionSpeed(Enum):
 	ppTransitionSpeedFast = 3  # Fast
 	ppTransitionSpeedMedium = 2  # Medium
 	ppTransitionSpeedMixed = -2  # Mixed
 	ppTransitionSpeedSlow = 1  # Slow
 
 
-class PpUpdateOption:
+class PpUpdateOption(Enum):
 	ppUpdateOptionAutomatic = 2  # Link will be updated each time the presentation is opened or the source file changes.
 	ppUpdateOptionManual = 1  # Link will be updated only when the user specifically asks to update the presentation.
 	ppUpdateOptionMixed = -2  # Mixed
 
 
-class PpViewType:
+class PpViewType(Enum):
 	ppViewHandoutMaster = 4  # Handout Master
 	ppViewMasterThumbnails = 12  # Master Thumbnails
 	ppViewNormal = 9  # Normal
@@ -1184,37 +1184,37 @@ class PpViewType:
 	ppViewTitleMaster = 8  # Title Master
 
 
-class PpWindowState:
+class PpWindowState(Enum):
 	ppWindowMaximized = 3  # Maximized
 	ppWindowMinimized = 2  # Minimized
 	ppWindowNormal = 1  # Normal
 
 
-class XlAxisCrosses:
+class XlAxisCrosses(Enum):
 	xlAxisCrossesAutomatic = -4105  # Word sets the axis crossing point.
 	xlAxisCrossesCustom = -4114  # The CrossesAt property specifies the axis crossing point.
 	xlAxisCrossesMaximum = 2  # The axis crosses at the maximum value.
 	xlAxisCrossesMinimum = 4  # The axis crosses at the minimum value.
 
 
-class XlAxisGroup:
+class XlAxisGroup(Enum):
 	xlPrimary = 1  # The primary axis group.
 	xlSecondary = 2  # The secondary axis group.
 
 
-class XlAxisType:
+class XlAxisType(Enum):
 	xlCategory = 1  # Axis displays categories.
 	xlSeriesAxis = 3  # Axis displays data series.
 	xlValue = 2  # Axis displays values.
 
 
-class XlBackground:
+class XlBackground(Enum):
 	xlBackgroundAutomatic = -4105  # Word controls the background.
 	xlBackgroundOpaque = 3  # An opaque background.
 	xlBackgroundTransparent = 2  # A transparent background.
 
 
-class XlBarShape:
+class XlBarShape(Enum):
 	xlBox = 0  # A box.
 	xlConeToMax = 5  # A cone, truncated at the specified value.
 	xlConeToPoint = 4  # A cone, coming to a point at the specified value.
@@ -1223,7 +1223,7 @@ class XlBarShape:
 	xlPyramidToPoint = 1  # A pyramid, coming to a point at the specified value.
 
 
-class XlBinsType:
+class XlBinsType(Enum):
 	xlBinsTypeAutomatic = 0  # Sets bins type automatically.
 	xlBinsTypeCategorical = 1  # Sets bins type by category.
 	xlBinsTypeManual = 2  # Sets bins type manually.
@@ -1231,37 +1231,37 @@ class XlBinsType:
 	xlBinsTypeBinCount = 4  # Sets bins type by count.
 
 
-class XlBorderWeight:
+class XlBorderWeight(Enum):
 	xlHairline = 1  # A hairline border (thinnest border).
 	xlMedium = -4138  # A medium border.
 	xlThick = 4  # A thick border (widest border).
 	xlThin = 2  # A thin border.
 
 
-class XlCategoryLabelLevel:
+class XlCategoryLabelLevel(Enum):
 	xlCategoryLabelLevelAll = -1  # Use all category label levels within range on the chart. The default.
 	xlCategoryLabelLevelCustom = -2  # Indicates literal data in the category labels.
 	xlCategoryLabelLevelNone = -3  # Use no category labels in the chart. Defaults to automatic indexed labels.
 
 
-class XlCategoryType:
+class XlCategoryType(Enum):
 	xlAutomaticScale = -4105  # Word controls the axis type.
 	xlCategoryScale = 2  # Axis groups data by an arbitrary set of categories.
 	xlTimeScale = 3  # Axis groups data on a time scale.
 
 
-class XlChartElementPosition:
+class XlChartElementPosition(Enum):
 	xlChartElementPositionAutomatic = -4105  # Automatically sets the position of the chart element.
 	xlChartElementPositionCustom = -4114  # Specifies a specific position for the chart element.
 
 
-class XlChartGallery:
+class XlChartGallery(Enum):
 	xlAnyGallery = 23  # Either of the galleries.
 	xlBuiltIn = 21  # The built-in gallery.
 	xlUserDefined = 22  # The user-defined gallery.
 
 
-class XlChartItem:
+class XlChartItem(Enum):
 	xlAxis = 21  # Axis.
 	xlAxisTitle = 17  # Axis title.
 	xlChartArea = 2  # Chart area.
@@ -1296,7 +1296,7 @@ class XlChartItem:
 	xlYErrorBars = 11  # Y error bars.
 
 
-class XlChartPicturePlacement:
+class XlChartPicturePlacement(Enum):
 	xlAllFaces = 7  # Display on all faces.
 	xlEnd = 2  # Display on end.
 	xlEndSides = 3  # Display on end and sides.
@@ -1306,25 +1306,25 @@ class XlChartPicturePlacement:
 	xlSides = 1  # Display on sides.
 
 
-class XlChartPictureType:
+class XlChartPictureType(Enum):
 	xlStack = 2  # The picture is sized to repeat a maximum of 15 times in the longest stacked bar.
 	xlStackScale = 3  # The picture is sized to a specified number of units and repeated the length of the bar.
 	xlStretch = 1  # The picture is stretched the full length of the stacked bar.
 
 
-class XlChartSplitType:
+class XlChartSplitType(Enum):
 	xlSplitByCustomSplit = 4  # The second chart displays arbitrary slides.
 	xlSplitByPercentValue = 3  # The second chart displays values less than a percentage of the total value. The percentage is specified by the SplitValue property.
 	xlSplitByPosition = 1  # The second chart displays the smallest values in the data series. The number of values to display is specified by the SplitValue property.
 	xlSplitByValue = 2  # The second chart displays values less than the value specified by the SplitValue property.
 
 
-class XlColorIndex:
+class XlColorIndex(Enum):
 	xlColorIndexAutomatic = -4105  # Automatic color.
 	xlColorIndexNone = -4142  # No color.
 
 
-class XlConstants:
+class XlConstants(Enum):
 	xl3DBar = -4099  # Three-dimensional bar chart group or series.
 	xl3DSurface = -4103  # Three-dimensional surface chart group or series.
 	xlAbove = 0  # The summary row is displayed above the specified range.
@@ -1390,12 +1390,12 @@ class XlConstants:
 	xlTriangle = 3  # Triangle.
 
 
-class XlCopyPictureFormat:
+class XlCopyPictureFormat(Enum):
 	xlBitmap = 2  # A bitmap (.bmp, .jpg, .gif).
 	xlPicture = -4147  # A drawn picture (.png, .wmf, .mix).
 
 
-class XlDataLabelPosition:
+class XlDataLabelPosition(Enum):
 	xlLabelPositionAbove = 0  # The data label is positioned above the data point.
 	xlLabelPositionBelow = 1  # The data label is positioned below the data point.
 	xlLabelPositionBestFit = 5  # Word sets the position of the data label.
@@ -1409,11 +1409,11 @@ class XlDataLabelPosition:
 	xlLabelPositionRight = -4152  # The data label is positioned to the right of the data point.
 
 
-class XlDataLabelSeparator:
+class XlDataLabelSeparator(Enum):
 	xlDataLabelSeparatorDefault = 1  # Word selects the separator.
 
 
-class XlDataLabelsType:
+class XlDataLabelsType(Enum):
 	xlDataLabelsShowBubbleSizes = 6  # Show the size of the bubble in reference to the absolute value.
 	xlDataLabelsShowLabel = 4  # The category for the point.
 	xlDataLabelsShowLabelAndPercent = 5  # The percentage of the total, and the category for the point. Available only for pie charts and doughnut charts.
@@ -1422,13 +1422,13 @@ class XlDataLabelsType:
 	xlDataLabelsShowValue = 2  # The default value for the point (assumed if this argument is not specified).
 
 
-class XlDisplayBlanksAs:
+class XlDisplayBlanksAs(Enum):
 	xlInterpolated = 3  # Values are interpolated into the chart.
 	xlNotPlotted = 1  # Blank cells are not plotted.
 	xlZero = 2  # Blanks are plotted as zero.
 
 
-class XlDisplayUnit:
+class XlDisplayUnit(Enum):
 	xlHundredMillions = -8  # Hundreds of millions.
 	xlHundreds = -2  # Hundreds.
 	xlHundredThousands = -5  # Hundreds of thousands.
@@ -1440,23 +1440,23 @@ class XlDisplayUnit:
 	xlThousands = -3  # Thousands.
 
 
-class XlEndStyleCap:
+class XlEndStyleCap(Enum):
 	xlCap = 1  # Caps are applied.
 	xlNoCap = 2  # No caps are applied.
 
-class XlErrorBarDirection:
+class XlErrorBarDirection(Enum):
 	xlChartX = -4168  # Bars run parallel to the y-axis for x-axis values.
 	xlChartY = 1  # Bars run parallel to the x-axis for y-axis values.
 
 
-class XlErrorBarInclude:
+class XlErrorBarInclude(Enum):
 	xlErrorBarIncludeBoth = 1  # Both the positive and negative error range.
 	xlErrorBarIncludeMinusValues = 3  # Only the negative error range.
 	xlErrorBarIncludeNone = -4142  # No error bar range.
 	xlErrorBarIncludePlusValues = 2  # Only the positive error range.
 
 
-class XlErrorBarType:
+class XlErrorBarType(Enum):
 	xlErrorBarTypeCustom = -4114  # The range is set by fixed values or cell values.
 	xlErrorBarTypeFixedValue = 1  # Fixed-length error bars.
 	xlErrorBarTypePercent = 2  # The percentage of the range to be covered by the error bars.
@@ -1464,7 +1464,7 @@ class XlErrorBarType:
 	xlErrorBarTypeStError = 4  # Shows the standard error range.
 
 
-class XlHAlign:
+class XlHAlign(Enum):
 	xlHAlignCenter = -4108  # Center.
 	xlHAlignCenterAcrossSelection = 7  # Center across selection.
 	xlHAlignDistributed = -4117  # Distribute.
@@ -1475,7 +1475,7 @@ class XlHAlign:
 	xlHAlignRight = -4152  # Right.
 
 
-class XlLegendPosition:
+class XlLegendPosition(Enum):
 	xlLegendPositionBottom = -4107  # Below the chart.
 	xlLegendPositionCorner = 2  # In the upper-right corner of the chart border.
 	xlLegendPositionCustom = -4161  # A custom position.
@@ -1484,7 +1484,7 @@ class XlLegendPosition:
 	xlLegendPositionTop = -4160  # Above the chart.
 
 
-class XlLineStyle:
+class XlLineStyle(Enum):
 	xlContinuous = 1  # A continuous line.
 	xlDash = -4115  # A dashed line.
 	xlDashDot = 4  # Alternating dashes and dots.
@@ -1495,7 +1495,7 @@ class XlLineStyle:
 	xlSlantDashDot = 13  # Slanted dashes.
 
 
-class XlMarkerStyle:
+class XlMarkerStyle(Enum):
 	xlMarkerStyleAutomatic = -4105  # Automatic markers.
 	xlMarkerStyleCircle = 8  # Circular markers.
 	xlMarkerStyleDash = -4115  # Long bar markers.
@@ -1510,20 +1510,20 @@ class XlMarkerStyle:
 	xlMarkerStyleX = -4168  # Square markers with an X.
 
 
-class XlOrientation:
+class XlOrientation(Enum):
 	xlDownward = -4170  # Text runs downward.
 	xlHorizontal = -4128  # Text runs horizontally.
 	xlUpward = -4171  # Text runs upward.
 	xlVertical = -4166  # Text runs downward and is centered in the cell.
 
 
-class XlParentDataLabelOptions:
+class XlParentDataLabelOptions(Enum):
 	xlParentDataLabelOptionsNone = 0  # No parent labels are shown.
 	xlParentDataLabelOptionsBanner = 1  # The parent label layout is a banner above the category.
 	xlParentDataLabelOptionsOverlapping = 2  # The parent label is laid out within the category.
 
 
-class XlPattern:
+class XlPattern(Enum):
 	xlPatternAutomatic = -4105  # Word controls the pattern.
 	xlPatternChecker = 9  # A checkerboard.
 	xlPatternCrissCross = 16  # Criss-crossed lines.
@@ -1548,12 +1548,12 @@ class XlPattern:
 	xlPatternVertical = -4166  # Dark vertical bars.
 
 
-class XlPictureAppearance:
+class XlPictureAppearance(Enum):
 	xlPrinter = 2  # The picture is copied as it will look when it is printed.
 	xlScreen = 1  # The picture is copied to resemble its display on the screen as closely as possible.
 
 
-class XlPieSliceIndex:
+class XlPieSliceIndex(Enum):
 	xlCenterPoint = 5  # The center point of a pie slice.
 	xlInnerCenterPoint = 8  # The innermost center point of a doughnut slice.
 	xlInnerClockwisePoint = 7  # The innermost point of the most clockwise radius of a doughnut slice.
@@ -1565,7 +1565,7 @@ class XlPieSliceIndex:
 	xlOuterCounterClockwisePoint = 1  # The outermost counterclockwise point of the circumference of a slice.
 
 
-class XlPieSliceLocation:
+class XlPieSliceLocation(Enum):
 	xlCenterPoint = 5  # The center point of a pie slice.
 	xlInnerCenterPoint = 8  # The innermost center point of a doughnut slice.
 	xlInnerClockwisePoint = 7  # The innermost point of the most clockwise radius of a doughnut slice.
@@ -1577,7 +1577,7 @@ class XlPieSliceLocation:
 	xlOuterCounterClockwisePoint = 1  # The outermost counterclockwise point of the circumference of a slice.
 
 
-class XlPivotFieldOrientation:
+class XlPivotFieldOrientation(Enum):
 	xlColumnField = 2  # A column field.
 	xlDataField = 4  # A data field.
 	xlHidden = 0  # A hidden field.
@@ -1585,13 +1585,13 @@ class XlPivotFieldOrientation:
 	xlRowField = 1  # A row field.
 
 
-class XlReadingOrder:
+class XlReadingOrder(Enum):
 	xlContext = -5002  # According to context.
 	xlLTR = -5003  # Left-to-right.
 	xlRTL = -5004  # Right-to-left.
 
 
-class XlRgbColor:
+class XlRgbColor(Enum):
 	xlAliceBlue = 16775408  # Alice Blue
 	xlAntiqueWhite = 14150650  # Antique White
 	xlAqua = 16776960  # Aqua
@@ -1738,28 +1738,28 @@ class XlRgbColor:
 	xlYellowGreen = 3329434  # Yellow Green
 
 
-class XlRowCol:
+class XlRowCol(Enum):
 	xlColumns = 2  # The data series is in a row.
 	xlRows = 1  # The data series is in a column.
 
 
-class XlScaleType:
+class XlScaleType(Enum):
 	xlScaleLinear = -4132  # A linear scale.
 	xlScaleLogarithmic = -4133  # A logarithmic scale.
 
 
-class XlSeriesNameLevel:
+class XlSeriesNameLevel(Enum):
 	xlSeriesNameLevelAll = -1  # Sets series names to all series name levels within range on the chart. The default.
 	xlSeriesNameLevelCustom = -2  # Indicates literal data in the series names.
 	xlSeriesNameLevelNone = -3  # Sets no series names in the chart.
 
 
-class XlSizeRepresents:
+class XlSizeRepresents(Enum):
 	xlSizeIsArea = 1  # The area of the bubble.
 	xlSizeIsWidth = 2  # The width of the bubble.
 
 
-class XlTickLabelOrientation:
+class XlTickLabelOrientation(Enum):
 	xlTickLabelOrientationAutomatic = -4105  # The text orientation is set by Microsoft Word.
 	xlTickLabelOrientationDownward = -4170  # The text runs downward.
 	xlTickLabelOrientationHorizontal = -4128  # The characters run horizontally.
@@ -1767,27 +1767,27 @@ class XlTickLabelOrientation:
 	xlTickLabelOrientationVertical = -4166  # The characters run vertically.
 
 
-class XlTickLabelPosition:
+class XlTickLabelPosition(Enum):
 	xlTickLabelPositionHigh = -4127  # The top or right side of the chart.
 	xlTickLabelPositionLow = -4134  # The bottom or left side of the chart.
 	xlTickLabelPositionNextToAxis = 4  # Next to the axis (where the axis is not at either side of the chart).
 	xlTickLabelPositionNone = -4142  # No tick marks.
 
 
-class XlTickMark:
+class XlTickMark(Enum):
 	xlTickMarkCross = 4  # Crosses the axis.
 	xlTickMarkInside = 2  # Inside the axis.
 	xlTickMarkNone = -4142  # No mark.
 	xlTickMarkOutside = 3  # Outside the axis.
 
 
-class XlTimeUnit:
+class XlTimeUnit(Enum):
 	xlDays = 0  # Days
 	xlMonths = 1  # Months
 	xlYears = 2  # Years
 
 
-class XlTrendlineType:
+class XlTrendlineType(Enum):
 	xlExponential = 5  # Uses an equation to calculate the least squares fit through points (for example, y=ab^x) .
 	xlLinear = -4132  # Uses the linear equation y = mx + b to calculate the least squares fit through points.
 	xlLogarithmic = -4133  # Uses the equation y = c ln x + b to calculate the least squares fit through points.
@@ -1801,7 +1801,7 @@ class XlTrendlineType:
 	xlUnderlineStyleSingleAccounting = 4  # Not supported.
 
 
-class XlVAlign:
+class XlVAlign(Enum):
 	xlVAlignBottom = -4107  # Bottom alignment.
 	xlVAlignCenter = -4108  # Center alignment.
 	xlVAlignDistributed = -4117  # Distributed alignment.
