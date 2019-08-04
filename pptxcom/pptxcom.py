@@ -9,7 +9,7 @@ import win32com.client as win32Client
 import win32com.client.gencache as win32ClientGen
 #from win32com.client import constants as consts
 
-import constants
+import constants as consts
 
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
