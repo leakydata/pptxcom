@@ -31,7 +31,7 @@ def grab_active(visible=True):
 
 def open(filepath, visible=True):
     """
-    @filepath: C:\path\to\the\powerpoint_file.pptx
+    @filepath: raw text file path r'C:\path\to\the\powerpoint_file.pptx'
     @visible: Set PowerPoint application window to visible
     
     Opens a PowerPoint file creates a COM object representing the application.
