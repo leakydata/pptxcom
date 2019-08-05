@@ -37,7 +37,7 @@ def active_pres():
 	return active_app().ActivePresentation
 
 
-def open(filepath, visible=True):
+def open_pres(filepath, visible=True):
 	"""
 	@filepath: raw text file path r'C:\path\to\the\powerpoint_file.pptx'
 	@visible: Set PowerPoint application window to visible
