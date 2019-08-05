@@ -36,9 +36,9 @@ def open(filepath, visible=True):
     
     Opens a PowerPoint file creates a COM object representing the application.
     """
-    path_to_file = r'%s'%filepath
+
     try:
-        os.path.isfile(path_to_file)
+        os.path.isfile(filepath)
     except ValueError:
         print("File does not exist.")
         return False
@@ -47,9 +47,9 @@ def open(filepath, visible=True):
         p = win32Client.Dispatch("PowerPoint.Application")
     except com_error:
         print("File not available.")   
+        return False
         
     p.Visible = visible
-    
-    pres = p.Presentations.Open(path_to_file)   
+    pres = p.Presentations.Open(filepath)   
     
     return pres
