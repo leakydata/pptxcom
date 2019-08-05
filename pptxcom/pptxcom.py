@@ -46,8 +46,8 @@ def active_pres(visible=True):
     # If Visible = False we will get a COM error since an Open Applivation window will always be visible
     # Visible is set here to avoid vagueness, but it is basically optional in this specific case
     p.Visible = visible 
-    pres = p.ActivePresentation
-    return pres
+
+    return p
 
 
 def open(filepath, visible=True):
