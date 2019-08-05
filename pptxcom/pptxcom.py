@@ -29,7 +29,7 @@ def grab_active(visible=True):
 
     return p
 
-def open_pptx(visible=True, filepath):
+def open_pptx(filepath, visible=True):
     """
     @visible: Set PowerPoint application window to visible
     
