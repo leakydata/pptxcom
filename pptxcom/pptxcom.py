@@ -29,7 +29,7 @@ def grab_active(visible=True):
 
     return p
 
-def open_pptx(filepath, visible=True):
+def open(filepath, visible=True):
     """
     @visible: Set PowerPoint application window to visible
     
@@ -38,9 +38,9 @@ def open_pptx(filepath, visible=True):
     try:
         p = win32Client.Dispatch("PowerPoint.Application")
     except com_error:
-        p = win32ClientGen.Dispatch("PowerPoint.Application")   
+        print("File not available.")   
         
-    p.Visible = True
+    p.Visible = visible
     
     pres = p.Presentations.Open(filepath)   
     
