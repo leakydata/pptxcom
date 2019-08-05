@@ -21,11 +21,10 @@ def active_app():
 	"""
 	
 	try:
-		p = win32Client.GetActiveObject("PowerPoint.Application")
+		return win32Client.GetActiveObject("PowerPoint.Application")
 	except com_error:
-		p = win32ClientGen.EnsureDispatch("PowerPoint.Application")
-	print("p:",p)
-	return p
+		return win32ClientGen.EnsureDispatch("PowerPoint.Application")
+
 
 
 def open(filepath, visible=True):
