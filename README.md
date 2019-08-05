@@ -30,10 +30,10 @@ Pres = pt.open_pres(r'C:\path\to\file.pptx')
 * Nathan Jones
 
 ## Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/leakydata/pptxcom/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
-This project is licensed under the GNU General Public License v3.0 - see the LICENSE.md file for details
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/leakydata/pptxcom/blob/master/LICENSE) file for details
 
 ## Acknowledgements
 * Thank you to [Mark Hammond](https://github.com/mhammond) for his work on the [pywin32](https://github.com/mhammond/pywin32) module.
