@@ -4,7 +4,7 @@ Created on Sun Aug  4 14:00:36 2019
 
 @author: Nathan Jones
 """
-
+import os
 import win32com.client as win32Client
 import win32com.client.gencache as win32ClientGen
 #from win32com.client import constants
@@ -31,10 +31,18 @@ def grab_active(visible=True):
 
 def open(filepath, visible=True):
     """
+    @filepath: C:\path\to\the\powerpoint_file.pptx
     @visible: Set PowerPoint application window to visible
     
     Opens a PowerPoint file creates a COM object representing the application.
     """
+    path_to_file = r'%s'%filepath
+    try:
+        os.path.isfile(path_to_file)
+    except ValueError:
+        print("File does not exist.")
+        return False
+    
     try:
         p = win32Client.Dispatch("PowerPoint.Application")
     except com_error:
@@ -42,6 +50,6 @@ def open(filepath, visible=True):
         
     p.Visible = visible
     
-    pres = p.Presentations.Open(filepath)   
+    pres = p.Presentations.Open(path_to_file)   
     
     return pres
