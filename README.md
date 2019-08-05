@@ -36,5 +36,5 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE.md file for details
 
 ## Acknowledgements
-* Thank you to [Mark Hammond](https://github.com/mhammond) for his work on the [pywin32 module](https://github.com/mhammond/pywin32).
+* Thank you to [Mark Hammond](https://github.com/mhammond) for his work on the [pywin32](https://github.com/mhammond/pywin32) module.
 * Thank you to anybody whose code I've used.
