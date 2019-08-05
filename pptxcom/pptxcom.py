@@ -24,6 +24,7 @@ def active_app(visible=True):
 		p = win32Client.GetActiveObject("PowerPoint.Application")
 	except com_error:
 		p = win32ClientGen.EnsureDispatch("PowerPoint.Application")
+		return False
 	
 	# If Visible = False we will get a COM error since an Open Applivation window will always be visible
 	# Visible is set here to avoid vagueness, but it is basically optional in this specific case
