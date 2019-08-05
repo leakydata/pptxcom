@@ -24,7 +24,7 @@ def active_app():
 		p = win32Client.GetActiveObject("PowerPoint.Application")
 	except com_error:
 		p = win32ClientGen.EnsureDispatch("PowerPoint.Application")
-	
+	print("p:",p)
 	return p
 
 
