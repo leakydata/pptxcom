@@ -12,7 +12,7 @@ import win32com.client.gencache as win32ClientGen
 
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
-def active_app(visible=True):
+def active_app():
 	"""
 	@visible: Set PowerPoint application window to visible
 	
@@ -24,12 +24,7 @@ def active_app(visible=True):
 		p = win32Client.GetActiveObject("PowerPoint.Application")
 	except com_error:
 		p = win32ClientGen.EnsureDispatch("PowerPoint.Application")
-		return False
 	
-	# If Visible = False we will get a COM error since an Open Applivation window will always be visible
-	# Visible is set here to avoid vagueness, but it is basically optional in this specific case
-	p.Visible = visible 
-
 	return p
 
 
