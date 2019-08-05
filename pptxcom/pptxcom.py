@@ -25,6 +25,16 @@ def active_app():
 	except com_error:
 		return win32ClientGen.EnsureDispatch("PowerPoint.Application")
 
+	
+def active_pres():
+	"""
+	@visible: Set PowerPoint application window to visible
+	
+	Grabs the active PowerPoint application and creates a COM object
+	representing the application.
+	"""
+	
+	return active_app().ActivePresentation
 
 
 def open(filepath, visible=True):
