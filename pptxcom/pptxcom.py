@@ -29,7 +29,7 @@ def grab_active(visible=True):
 
     return p
 
-def open_pptx(visible=True):
+def open_pptx(visible=True, filepath):
     """
     @visible: Set PowerPoint application window to visible
     
@@ -43,6 +43,6 @@ def open_pptx(visible=True):
         
     p.Visible = True
     
-    pres = p.Presentations.Open("C:\\Users\\schol\\Stem Healthcare, Inc\\STEMDEV - Documents\\python\\powerpoint\\test1.pptx")   
+    pres = p.Presentations.Open(filepath)   
     
     return pres
