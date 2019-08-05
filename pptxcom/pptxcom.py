@@ -28,3 +28,21 @@ def grab_active(visible=True):
     p.Visible = visible 
 
     return p
+
+def open_pptx(visible=True):
+    """
+    @visible: Set PowerPoint application window to visible
+    
+    Grabs the active PowerPoint application and creates a COM object
+    representing the application.
+    """
+    try:
+        p = win32Client.Dispatch("PowerPoint.Application")
+    except com_error:
+        p = win32ClientGen.Dispatch("PowerPoint.Application")   
+        
+    p.Visible = True
+    
+    pres = p.Presentations.Open("C:\\Users\\schol\\Stem Healthcare, Inc\\STEMDEV - Documents\\python\\powerpoint\\test1.pptx")   
+    
+    return pres
