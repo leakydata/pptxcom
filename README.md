@@ -24,7 +24,7 @@ Pres = pt.open_pres(r'C:\path\to\file.pptx')
 ```
 
 ## Built With
-* [pywin32](https://github.com/mhammond/pywin32) - Python for Windows (pywin32) Extensions and COM interfaces
+* [pywin32](https://github.com/mhammond/pywin32) - Python for Windows (pywin32) Extensions (COM interfaces)
 
 ## Authors
 * Nathan Jones
