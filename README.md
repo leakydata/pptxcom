@@ -8,13 +8,19 @@ Python library for creating, editing, and controlling Microsoft's PowerPoint pre
 ### Grab an active PowerPoint application instance and create an object from it
 ```Python
 import pptxcom as pt
-Presentation = pt.grab_active()
+Presentation = pt.active_app()
+```
+
+### Grab an active PowerPoint application instance and create a presentation object from it
+```Python
+import pptxcom as pt
+Presentation = pt.active_pres()
 ```
 
 ### Open an existing PowerPoint presentation and create an object from it
 ```Python
 import pptxcom as pt
-Presentation = pt.open(r'C:\path\to\file.pptx') 
+Presentation = pt.open_pres(r'C:\path\to\file.pptx') 
 ```
 
 ## Built With
