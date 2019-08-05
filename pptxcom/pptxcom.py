@@ -10,7 +10,7 @@ import win32com.client.gencache as win32ClientGen
 
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
-def get_active_app(visible=True):
+def active_app(visible=True):
     """
     @visible: Set PowerPoint application window to visible
     
@@ -31,7 +31,7 @@ def get_active_app(visible=True):
 
 
 
-def get_active_pres(visible=True):
+def active_pres(visible=True):
     """
     @visible: Set PowerPoint application window to visible
     
