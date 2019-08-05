@@ -5,19 +5,19 @@ Python library for creating, editing, and controlling Microsoft's PowerPoint pre
 ### Installing
 `pip install git+https://github.com/leakydata/pptxcom`
 
-#### Grab an active PowerPoint application instance and create an object from it
+#### Grab an active PowerPoint application instance and create an object from it:
 ```Python
 import pptxcom as pt
 PPT = pt.active_app()
 ```
 
-#### Grab an active PowerPoint application instance and create a presentation object from it
+#### Grab an active PowerPoint application instance and create a presentation object from it:
 ```Python
 import pptxcom as pt
 Pres = pt.active_pres()
 ```
 
-#### Open an existing PowerPoint presentation and create an object from it
+#### Open an existing PowerPoint presentation and create an object from it:
 ```Python
 import pptxcom as pt
 Pres = pt.open_pres(r'C:\path\to\file.pptx') 
