@@ -7,7 +7,7 @@ Created on Sun Aug  4 14:00:36 2019
 
 import win32com.client as win32Client
 import win32com.client.gencache as win32ClientGen
-from win32com.client import constants
+#from win32com.client import constants
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
 def grab_active(visible=True):
@@ -33,8 +33,7 @@ def open_pptx(visible=True, filepath):
     """
     @visible: Set PowerPoint application window to visible
     
-    Grabs the active PowerPoint application and creates a COM object
-    representing the application.
+    Opens a PowerPoint file creates a COM object representing the application.
     """
     try:
         p = win32Client.Dispatch("PowerPoint.Application")
