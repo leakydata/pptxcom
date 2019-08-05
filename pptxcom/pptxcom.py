@@ -30,7 +30,6 @@ def active_app(visible=True):
     return p
 
 
-
 def active_pres(visible=True):
     """
     @visible: Set PowerPoint application window to visible
@@ -47,8 +46,8 @@ def active_pres(visible=True):
     # If Visible = False we will get a COM error since an Open Applivation window will always be visible
     # Visible is set here to avoid vagueness, but it is basically optional in this specific case
     p.Visible = visible 
-
-    return p.ActivePresentation
+    pres = p.ActivePresentation
+    return pres
 
 
 def open(filepath, visible=True):
