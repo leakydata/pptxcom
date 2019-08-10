@@ -10,6 +10,8 @@ import os
 import win32com.client as win32Client
 import win32com.client.gencache as win32ClientGen
 
+import MSO as MSO
+
 from pywintypes import com_error  # pylint: disable=I0011,E0611
 
 def active_app():
