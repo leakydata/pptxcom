@@ -72,8 +72,8 @@ def open_pres(filepath, visible=True):
 	return pres
 
 # Convert standard RGB colors to PowerPoint color integer values
-def rgb_to_hex(rgb): # color uses bgr in hex
-    bgr = (rgb[2], rgb[1], rgb[0]) # convert rgb into bgr
+def rgb(rgb_color): # color uses bgr in hex
+    bgr = (rgb_color[2], rgb_color[1], rgb_color[0]) # convert rgb into bgr
     str_value = '%02x%02x%02x' % bgr # convert bgr in hex
     int_value = int(str_value, 16) # convert hex to integer
     return int_value
